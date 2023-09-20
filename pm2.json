@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "INCHAPIN",
+      "script": "npm",
+      "args": "start"
+    }
+  ]
+}
