@@ -1,0 +1,32 @@
+@import "../../../css/common.scss";
+
+.Container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 105px;
+}
+
+@media only screen and (min-width: $desktopWide) {
+  .Container {
+
+  }
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+  .Container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+  .Container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .Container {
+    padding: 0 20px;
+  }
+}

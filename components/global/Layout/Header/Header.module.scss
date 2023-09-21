@@ -1,0 +1,85 @@
+@import "../../../../css/common";
+@import '../../../../css/mixins.scss';
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+
+  .Left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Burger {
+      margin-right: 40px;
+      padding-left: 40px;
+      position: relative;
+      cursor: pointer;
+      transition: all .25s ease;
+      color: #111;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 14px;
+        background: url("../../../../images/header/burgerIcon.svg") no-repeat center / cover;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .Right {
+    a {
+      @include underline-hover;
+    }
+
+    a:first-of-type {
+      margin-right: 40px;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    a:last-of-type {
+      color: #2F80ED;
+      font-size: 13px;
+      line-height: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}
+
+
