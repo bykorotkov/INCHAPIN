@@ -3,8 +3,8 @@ import "../css/globals.scss"
 
 export const metadata: Metadata = {
     icons: {
-        icon: "/public/favicon/favicon.ico",
-        apple: "/public/favicon/apple-touch-icon.png"
+        icon: "/favicon/favicon.ico",
+        apple: "/favicon/apple-touch-icon.png"
     }
 }
 

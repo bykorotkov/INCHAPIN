@@ -29,7 +29,7 @@
       &:before {
         content: '';
         position: absolute;
-        top: 0;
+        top: -1px;
         left: 0;
         width: 32px;
         height: 14px;
@@ -42,8 +42,16 @@
     }
   }
 
+  .Logo {
+    transition: all .25s ease;
+    &:hover {
+      transform: translate(-1px, -1px);
+    }
+  }
+
   .Right {
     a {
+      font-weight: 600;
       @include underline-hover;
     }
 
@@ -51,7 +59,6 @@
       margin-right: 40px;
       font-size: 14px;
       line-height: 14px;
-      font-weight: 600;
       color: #111;
     }
 
@@ -61,7 +68,6 @@
       line-height: 13px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      font-weight: 600;
     }
   }
 }

@@ -12,6 +12,7 @@ const options: OptionsType[] = [
     { value: 'vanilla', label: 'Vanilla' }
 ]
 
+
 const Select = () => {
     return (
         <div>
