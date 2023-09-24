@@ -1,6 +1,8 @@
 
 import { Metadata } from "next"
 import Layout from "@/components/global/Layout/Layout"
+import MainPage from "@/components/pages/MainPage/MainPage"
+import Container from "@/components/ui/Container/Container"
 
 export const metadata: Metadata = {
     title: 'Главная'
@@ -8,7 +10,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Layout>
-        <div>123</div>
+        <Container>
+            <MainPage />
+        </Container>
     </Layout>
   )
 }

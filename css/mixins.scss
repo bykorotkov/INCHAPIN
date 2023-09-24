@@ -26,3 +26,31 @@
     transition: transform 0.25s ease-out;
   }
 }
+
+@mixin to-top-hover {
+  position: relative;
+  overflow: hidden;
+
+  a {
+    position: absolute;
+    transition: all .5s ease;
+    white-space: nowrap;
+    &:first-child {
+      top: 0;
+    }
+    &:last-child {
+      top: 130%;
+    }
+  }
+
+  &:hover {
+    a {
+      &:first-child {
+        top: -130%;
+      }
+      &:last-child {
+        top: 0;
+      }
+    }
+  }
+}

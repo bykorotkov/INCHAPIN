@@ -1,0 +1,105 @@
+.Main {
+  padding-bottom: 40px;
+
+  .Banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .Top {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .LeftText {
+      span {
+        color: #2F80ED;
+        font-size: 26px;
+        line-height: 36px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+
+    .RightText {
+      font-size: 120px;
+      line-height: 92px;
+    }
+  }
+
+  .Bottom {
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Left {
+      .About {
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: right;
+        color: #2F80ED;
+        margin-bottom: 27px;
+      }
+      .BannerBottom {
+        position: relative;
+        img {
+          width: 567px;
+          height: 720px;
+        }
+
+        .ImageDecor {
+          position: absolute;
+          top: 188px;
+          right: -100px;
+          width: 200px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #2F80ED;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .Right {
+      max-width: 454px;
+
+      .DecorRow {
+        width: 49px;
+        height: 9px;
+        background-color: #2F80ED;
+        border-radius: 2px;
+        margin-bottom: 50px;
+      }
+      .TextHead {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+
+        span {
+          color: #2F80ED;
+        }
+      }
+
+      .TextBody {
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 96px;
+
+        span {
+          color: #2F80ED;
+        }
+      }
+    }
+  }
+}
