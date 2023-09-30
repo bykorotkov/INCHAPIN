@@ -1,5 +1,6 @@
 .Main {
   padding-bottom: 40px;
+  padding-bottom: 1500px;
 
   .Banner {
     img {
@@ -35,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1247px;
 
     .Left {
       .About {
@@ -98,6 +100,82 @@
 
         span {
           color: #2F80ED;
+        }
+      }
+
+      .VideoBlock {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .Text {
+          p {
+            font-size: 14px;
+            line-height: 22px;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+
+          span {
+            color: #888888;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+
+        .Video {
+          height: 186px;
+          width: 186px;
+          position: relative;
+          background: url("../../../images/MainPage/videoImage.png") no-repeat center / cover;
+          border-radius: 50%;
+          padding: 38px;
+          cursor: pointer;
+
+
+          &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 186px;
+            height: 186px;
+            border-radius: 100%;
+            margin: 0 auto;
+            background: rgba(47, 128, 237, 0.30);
+            overflow: hidden;
+          }
+
+
+          .Effect {
+            border: 1px solid #fff;
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: all .75s ease;
+
+            &:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: url("../../icons/videoIcon.svg") no-repeat center / cover;
+              width: 48px;
+              height: 22px;
+            }
+
+
+          }
+
+          &:hover {
+            .Effect {
+              transform: scale(1.2);
+            }
+          }
+
         }
       }
     }
