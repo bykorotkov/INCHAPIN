@@ -1,5 +1,6 @@
 import React from "react"
 import ReactSelect from 'react-select'
+import classes from './Select.module.scss'
 
 interface OptionsType {
     value: string;
@@ -7,8 +8,8 @@ interface OptionsType {
 }
 
 const options: OptionsType[] = [
-    { value: 'chocolate', label: 'Визуальный выбор'},
-    { value: 'strawberry', label: 'Выбор по параметрам'}
+    { value: 'Визуальный выбор', label: 'Визуальный выбор'},
+    { value: 'Выбор по параметрам', label: 'Выбор по параметрам'}
 ]
 
 const colorStyles = {
@@ -16,13 +17,13 @@ const colorStyles = {
         width: '203px', borderColor: '#2F80ED', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '13px',
         lineHeight: '13px', cursor: 'pointer', transition: "all .25s ease", padding: '0 0 0 10px', whiteSpace: 'nowrap',
         "&:hover": {
-            opacity: '0.8'
+
         }}),
-    // option: (styles, {data, isDisable, isFocused, isSelected}) => {
-    //     return {...styles, color: '#000', isSelected: data.color}
-    // }
+    option: (styles:any) => {
+        return {...styles, cursor: 'pointer'}
+    },
     placeholder: (styles: any) => ({...styles, color: '#fff', fontSize: '13px', fontWeight: '600', position: 'absolute',
-        top: '30%', transition: 'all .25s ease',
+        top: '30%', transition: 'all .25s ease', overflow: 'hidden',
         "&:hover": {
             top: '-130%'
         }}),
@@ -31,13 +32,18 @@ const colorStyles = {
 
 const Select = () => {
     return (
-        <div>
+        <div className={classes.SelectContainer}>
             <ReactSelect
                 options={options}
                 styles={colorStyles}
-                placeholder='Выбрать квартиру'
+                placeholder=''
                 components={{ IndicatorSeparator: () => null}}
+                className={classes.Select}
             />
+            <div className={classes.Spans}>
+                <span>Выбрать квартиру</span>
+                <span>Выбрать квартиру</span>
+            </div>
         </div>
     )
 }

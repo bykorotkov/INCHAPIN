@@ -7,9 +7,10 @@ import Container from "@/components/ui/Container/Container"
 export const metadata: Metadata = {
     title: 'Главная'
 }
+
 export default function Page() {
   return (
-    <Layout>
+    <Layout >
         <Container>
             <MainPage />
         </Container>

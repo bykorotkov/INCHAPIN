@@ -1,0 +1,45 @@
+@import '../../../css/mixins.scss';
+
+.SelectContainer {
+  position: relative;
+  transition: all .25s ease;
+
+  .Spans {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    pointer-events: none;
+
+    span {
+      display: block;
+      width: 140px;
+      height: 20px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 13px;
+      transition: all .25s ease;
+      position: absolute;
+      top: 0;
+      text-transform: uppercase;
+
+
+      @include to-top-hover;
+    }
+
+
+  }
+  &:hover {
+    .Spans {
+      span {
+        top: -100%;
+      }
+    }
+
+  }
+}
+
+

@@ -1,0 +1,20 @@
+.BannerBottom {
+  position: relative;
+  img {
+    width: 567px;
+    height: 720px;
+  }
+
+  .ImageDecor {
+    position: absolute;
+    top: 188px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F80ED;
+    border-radius: 50%;
+  }
+}
