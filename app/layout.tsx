@@ -5,7 +5,8 @@ export const metadata: Metadata = {
     icons: {
         icon: "/favicon/favicon.ico",
         apple: "/favicon/apple-touch-icon.png"
-    }
+    },
+    title: 'Главная'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

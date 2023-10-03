@@ -1,19 +1,22 @@
-
+'use client'
 import { Metadata } from "next"
 import Layout from "@/components/global/Layout/Layout"
 import MainPage from "@/components/pages/MainPage/MainPage"
 import Container from "@/components/ui/Container/Container"
+import { Provider } from "react-redux"
+import { setupStore } from "@/store/store"
 
-export const metadata: Metadata = {
-    title: 'Главная'
-}
+const store = setupStore()
 
 export default function Page() {
   return (
-    <Layout >
-        <Container>
-            <MainPage />
-        </Container>
-    </Layout>
+      <Provider store={store}>
+          <Layout >
+              <Container>
+                  <MainPage />
+              </Container>
+          </Layout>
+      </Provider>
+
   )
 }

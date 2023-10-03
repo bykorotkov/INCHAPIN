@@ -1,19 +1,17 @@
-'use client'
-
 import React from "react"
-import classes from './Header.module.scss'
-import Image from "next/image"
-import headerLogo from '@/images/header/headerLogo.svg'
-import Link from "next/link"
-import Select from "@/components/ui/Select/Select"
 import Container from "@/components/ui/Container/Container"
+import classes from "./FixedHeader.module.scss"
+import Select from "@/components/ui/Select/Select"
+import Link from "next/link"
+import Image from "next/image"
+import headerLogo from "@/images/header/headerLogo.svg"
+import classNames from "classnames"
 
-const Header = () => {
+const FixedHeader = () => {
     return (
         <div>
             <Container>
-                <div className={classes.Header}>
-
+                <div className={classNames(classes.Header, classes.FixedHeader)}>
                     <div className={classes.Left}>
                         <div className={classes.BurgerContainer}>
                             <div className={classes.BurgerItems}>
@@ -46,9 +44,7 @@ const Header = () => {
                 </div>
             </Container>
         </div>
-
-
     )
 }
 
-export default Header
+export default FixedHeader

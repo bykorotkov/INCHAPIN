@@ -3,36 +3,30 @@ import React, { useEffect, useRef, useState } from "react"
 import classes from "./ParallaxItem.module.scss"
 import Image from "next/image"
 import aboutBanner from "@/images/MainPage/AboutBanner1440.jpg"
-import Scrollbar from "smooth-scrollbar"
+import { useAppSelector } from "@/hooks/redux"
 
 const ParallaxItem = () => {
     const [translateY, setTranslateY] = useState(0);
     const [translateYIcon, setTranslateYIcon] = useState(0);
-
+    const {scroll} = useAppSelector(state => state.scrollReducer)
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY;
-            const newTranslateY = -scrollY * 0.08;
+            // const scrollY = window.scrollY;
+            const newTranslateY = -scroll * 0.05;
             setTranslateY(newTranslateY);
         };
 
         const handleScrollIcon = () => {
-            const scrollY = window.scrollY;
-            const newTranslateY = -scrollY * 0.18;
+            // const scrollY = window.scrollY;
+            const newTranslateY = -scroll * 0.12;
             setTranslateYIcon(newTranslateY);
         };
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('scroll', handleScrollIcon);
+        handleScroll()
+        handleScrollIcon()
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('scroll', handleScrollIcon);
-        }
-
-
-    }, []);
+    }, [scroll]);
 
 
     return (

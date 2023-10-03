@@ -5,6 +5,7 @@ import Image from "next/image"
 import banner from '@/images/MainPage/ban1440.jpg'
 import Video from "@/components/pages/MainPage/Video/Video"
 import ParallaxItem from "@/components/pages/MainPage/ParallaxItem/ParallaxItem"
+import inchapLogo from '@/images/MainPage/inchapLogo.svg'
 
 const MainPage = () => {
 
@@ -20,8 +21,8 @@ const MainPage = () => {
                     <span>для ценителей роскоши</span>
                 </div>
 
-                <div className={classes.RightText}>
-                    INCHAPIN
+                <div className={classes.InchapLogo}>
+                    <Image src={inchapLogo} alt='' />
                 </div>
             </div>
             <div className={classes.Bottom}>

@@ -1,0 +1,164 @@
+@import "../../../../css/common";
+@import '../../../../css/mixins.scss';
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  max-width: 1360px;
+  width: 100%;
+
+  .Left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .BurgerContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 40px;
+
+      .BurgerItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18px;
+        cursor: pointer;
+
+        .Line {
+          width: 32px;
+          height: 2px;
+          background-color: #5194F0;
+          margin-bottom: 4px;
+          transition: all .25s ease;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .Burger {
+        padding-left: 12px;
+        position: relative;
+        cursor: pointer;
+        transition: all .25s ease;
+        color: #111;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        .BurgerItems {
+          .Line {
+            &:first-child {
+              transform: translateY(-2px);
+            }
+            &:last-child {
+              transform: translateY(2px);
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .Logo {
+    transition: all .25s ease;
+    position: relative;
+    height: 30px;
+    width: 197px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      transition: all .5s ease;
+      white-space: nowrap;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:last-child {
+        top: 130%;
+      }
+    }
+    &:hover {
+      img {
+        &:first-child {
+          top: -130%;
+        }
+        &:last-child {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .Right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Link {
+      @include to-top-hover;
+
+      &:first-child {
+        margin-right: 40px;
+        width: 105px;
+        height: 14px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        width: 135px;
+        height: 14px;
+      }
+    }
+    a {
+      font-weight: 600;
+    }
+
+    .Link:first-of-type {
+      font-size: 14px;
+      line-height: 14px;
+      color: #111;
+    }
+
+    .Link:last-of-type {
+      color: #2F80ED;
+      font-size: 13px;
+      line-height: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}
+
+

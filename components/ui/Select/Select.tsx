@@ -15,10 +15,8 @@ const options: OptionsType[] = [
 const colorStyles = {
     control: (styles: any) => ({...styles , backgroundColor: '#2F80ED', color: '#fff', borderRadius: '100px',
         width: '203px', borderColor: '#2F80ED', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '13px',
-        lineHeight: '13px', cursor: 'pointer', transition: "all .25s ease", padding: '0 0 0 10px', whiteSpace: 'nowrap',
-        "&:hover": {
-
-        }}),
+        lineHeight: '13px', cursor: 'pointer', transition: "all .25s ease", padding: '0 0 0 12px', whiteSpace: 'nowrap',
+        }),
     option: (styles:any) => {
         return {...styles, cursor: 'pointer'}
     },
@@ -27,7 +25,9 @@ const colorStyles = {
         "&:hover": {
             top: '-130%'
         }}),
-    dropdownIndicator: (styles: any) => ({...styles, color: '#fff'})
+    dropdownIndicator: (styles: any) => ({...styles, color: '#fff', padding: '8px 20px 8px 2px', '&:hover': {
+        color: '#fff'
+    }})
 }
 
 const Select = () => {
@@ -39,6 +39,9 @@ const Select = () => {
                 placeholder=''
                 components={{ IndicatorSeparator: () => null}}
                 className={classes.Select}
+                isSearchable={false}
+                isClearable={false}
+                value={null}
             />
             <div className={classes.Spans}>
                 <span>Выбрать квартиру</span>

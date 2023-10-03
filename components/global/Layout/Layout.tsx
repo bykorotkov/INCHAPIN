@@ -3,7 +3,9 @@ import React, { useEffect, useRef } from "react"
 import classes from './Layout.module.scss'
 import Header from "@/components/global/Layout/Header/Header"
 import Scrollbar from "smooth-scrollbar"
-import { ScrollbarOptions } from "smooth-scrollbar/interfaces"
+import { setScroll } from "@/store/reducers/scrollSlice";
+import { useAppDispatch } from "@/hooks/redux"
+import FixedHeader from "@/components/global/Layout/FixedHeader/FixedHeader"
 
 type LayoutType = {
     children: React.ReactNode
@@ -21,7 +23,7 @@ const Layout = ({children}: LayoutType) => {
     //         window.removeEventListener("beforeunload", handleUnload);
     //     };
     // }, []);
-
+    const dispatch = useAppDispatch();
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -31,19 +33,24 @@ const Layout = ({children}: LayoutType) => {
             renderByPixels: true,
             alwaysShowTracks: false,
             continuousScrolling: true,
-            // wheelEventTarget: document.body,
+        });
+
+        scrollbar.addListener((status) => {
+            dispatch(setScroll(status.offset.y));
         });
 
         return () => {
             scrollbar.destroy();
         };
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className={classes.Layout} ref={containerRef} style={{position: "fixed"}}>
             <Header />
+            <FixedHeader />
             {children}
         </div>
+
     )
 }
 
