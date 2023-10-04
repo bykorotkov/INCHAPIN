@@ -1,9 +1,11 @@
 import { combineReducers } from "redux"
 import { configureStore } from "@reduxjs/toolkit"
 import scrollReducer from './reducers/scrollSlice'
+import modalReducer from './reducers/modalSlice'
 
 const rootReducer = combineReducers({
-    scrollReducer
+    scrollReducer,
+    modalReducer
 })
 
 export const setupStore = () => {

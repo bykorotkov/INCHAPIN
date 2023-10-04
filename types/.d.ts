@@ -15,3 +15,5 @@ declare module "smooth-scrollbar" {
         destroy(): void;
     }
 }
+
+declare module 'react-fancybox';

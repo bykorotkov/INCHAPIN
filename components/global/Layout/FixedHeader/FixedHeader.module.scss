@@ -7,9 +7,16 @@
   justify-content: space-between;
   height: 100px;
   position: fixed;
-  top: 0;
+  top: -100px;
   max-width: 1360px;
   width: 100%;
+  z-index: 20;
+  background-color: #fff;
+  transition: all .25s ease;
+
+  &.show {
+    top: 0;
+  }
 
   .Left {
     display: flex;
@@ -146,6 +153,9 @@
 }
 
 @media only screen and (min-width: $desktopWide) {
+  .Header {
+    max-width: 1760px;
+  }
 
 }
 

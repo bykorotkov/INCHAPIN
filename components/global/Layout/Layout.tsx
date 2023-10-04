@@ -45,10 +45,13 @@ const Layout = ({children}: LayoutType) => {
     }, [dispatch]);
 
     return (
-        <div className={classes.Layout} ref={containerRef} style={{position: "fixed"}}>
-            <Header />
+        <div>
             <FixedHeader />
-            {children}
+            <div className={classes.Layout} ref={containerRef} style={{position: "fixed"}}>
+                <Header />
+                {children}
+            </div>
+
         </div>
 
     )

@@ -1,0 +1,36 @@
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .Head {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .Subhead {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 50px;
+  }
+
+  a {
+    background-color: #2F80ED;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 28px;
+    transition: all .25s ease;
+    border: 1px solid #2F80ED;
+
+    &:hover {
+      color: #2F80ED;
+      background-color: #fff;
+      border-color: #2F80ED;
+    }
+  }
+}

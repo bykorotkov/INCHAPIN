@@ -4,6 +4,7 @@ import classes from "./ParallaxItem.module.scss"
 import Image from "next/image"
 import aboutBanner from "@/images/MainPage/AboutBanner1440.jpg"
 import { useAppSelector } from "@/hooks/redux"
+import Fancybox from "@/plugins/Fancybox"
 
 const ParallaxItem = () => {
     const [translateY, setTranslateY] = useState(0);
@@ -28,10 +29,20 @@ const ParallaxItem = () => {
 
     }, [scroll]);
 
-
     return (
         <div className={classes.BannerBottom}>
-            <Image src={aboutBanner} alt='' style={{transform: `translate(0%, calc(10% + ${translateY}px))`}}/>
+            <Fancybox
+                options={{
+                    Carousel: {
+                        infinite: false
+                    }
+                }}
+            >
+                <a data-fancybox="gallery" href='/AboutBanner1440.jpg'>
+                    <Image src={aboutBanner} alt='' style={{transform: `translate(0%, calc(10% + ${translateY}px))`}}/>
+                </a>
+            </Fancybox>
+
             <div className={classes.ImageDecor} style={{transform: `translate(0%, calc(50% + ${translateYIcon}px))`}}>
                 <svg  width="49" height="68" viewBox="0 0 49 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M47.6105 0C48.3461 0 49 0.623853 49 1.32569V7.17431C49 7.87615 48.3461 8.5 47.6105 8.5H1.38949C0.653876 8.5 2.74191e-09 7.87615 2.74191e-09 7.17431V1.32569C2.74191e-09 0.623853 0.653876 0 1.38949 0H47.6105Z" fill="white"/>
