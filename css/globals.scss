@@ -9,7 +9,7 @@
 
 html {
   scroll-behavior: auto;
-  --progress-percent: 0%
+  --progress-percent: 0%;
 }
 
 html,
@@ -133,4 +133,14 @@ button {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.enter-active {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.enter-done {
+  visibility: visible !important;
+  opacity: 1 !important;
 }

@@ -1,0 +1,36 @@
+@import '../../../css/common.scss';
+
+.Wrap {
+  .Title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .Field {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #F8F8F8;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    resize: none;
+    height: 60px;
+  }
+}
+
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+  .Wrap {
+    .Title {
+      font-size: 12px;
+    }
+  }
+}

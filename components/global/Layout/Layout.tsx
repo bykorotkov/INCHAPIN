@@ -1,16 +1,18 @@
-'use client'
+"use client"
 import React, { useEffect, useRef } from "react"
-import classes from './Layout.module.scss'
+import classes from "./Layout.module.scss"
 import Header from "@/components/global/Layout/Header/Header"
 import Scrollbar from "smooth-scrollbar"
-import { setScroll } from "@/store/reducers/scrollSlice";
-import { useAppDispatch } from "@/hooks/redux"
+import { setScroll } from "@/store/reducers/scrollSlice"
+import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import FixedHeader from "@/components/global/Layout/FixedHeader/FixedHeader"
+import CallbackForm from "@/components/popup/CallbackForm/CallbackForm"
+import { CSSTransition } from "react-transition-group"
 
 type LayoutType = {
     children: React.ReactNode
 }
-const Layout = ({children}: LayoutType) => {
+const Layout = ({ children }: LayoutType) => {
     //Подгрузка страницы сверху при обновлении
     // useEffect(() => {
     //     const handleUnload = () => {
@@ -23,8 +25,9 @@ const Layout = ({children}: LayoutType) => {
     //         window.removeEventListener("beforeunload", handleUnload);
     //     };
     // }, []);
-    const dispatch = useAppDispatch();
-    const containerRef = useRef<HTMLDivElement>(null);
+    const dispatch = useAppDispatch()
+    const containerRef = useRef<HTMLDivElement>(null)
+    const { name } = useAppSelector((state) => state.modalReducer)
 
     useEffect(() => {
         const scrollbar = Scrollbar.init(containerRef.current as HTMLDivElement, {
@@ -32,28 +35,38 @@ const Layout = ({children}: LayoutType) => {
             thumbMinSize: 20,
             renderByPixels: true,
             alwaysShowTracks: false,
-            continuousScrolling: true,
-        });
+            continuousScrolling: true
+        })
 
         scrollbar.addListener((status) => {
-            dispatch(setScroll(status.offset.y));
-        });
+            dispatch(setScroll(status.offset.y))
+        })
 
         return () => {
-            scrollbar.destroy();
-        };
-    }, [dispatch]);
+            scrollbar.destroy()
+        }
+    }, [dispatch])
 
     return (
-        <div>
+        <>
             <FixedHeader />
-            <div className={classes.Layout} ref={containerRef} style={{position: "fixed"}}>
+            <div
+                className={classes.Layout}
+                ref={containerRef}
+                style={{ position: "fixed" }}
+            >
                 <Header />
                 {children}
             </div>
-
-        </div>
-
+            <CSSTransition
+                in={name === "CallbackForm"}
+                timeout={200}
+                mountOnEnter={true}
+                unmountOnExit={true}
+            >
+                {() => <CallbackForm />}
+            </CSSTransition>
+        </>
     )
 }
 
