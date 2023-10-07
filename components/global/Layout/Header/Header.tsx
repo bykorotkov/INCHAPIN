@@ -53,8 +53,8 @@ const Header = () => {
                             className={classes.Link}
                             onClick={() => dispatch(openModal("CallbackForm"))}
                         >
-                            <a href="#">ЗАКАЗАТЬ ЗВОНОК</a>
-                            <a href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+                            <a>ЗАКАЗАТЬ ЗВОНОК</a>
+                            <a>ЗАКАЗАТЬ ЗВОНОК</a>
                         </div>
                     </div>
                 </div>

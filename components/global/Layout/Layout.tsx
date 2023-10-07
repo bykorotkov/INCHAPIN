@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import FixedHeader from "@/components/global/Layout/FixedHeader/FixedHeader"
 import CallbackForm from "@/components/popup/CallbackForm/CallbackForm"
 import { CSSTransition } from "react-transition-group"
+import VideoForm from "@/components/popup/VideoForm/VideoForm"
 
 type LayoutType = {
     children: React.ReactNode
@@ -65,6 +66,14 @@ const Layout = ({ children }: LayoutType) => {
                 unmountOnExit={true}
             >
                 {() => <CallbackForm />}
+            </CSSTransition>
+            <CSSTransition
+                in={name === "VideoForm"}
+                timeout={200}
+                mountOnEnter={true}
+                unmountOnExit={true}
+            >
+                {() => <VideoForm />}
             </CSSTransition>
         </>
     )

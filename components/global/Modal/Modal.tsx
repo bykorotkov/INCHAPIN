@@ -3,6 +3,7 @@ import classes from "./Modal.module.scss"
 import { closeModal } from "@/store/reducers/modalSlice"
 import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import CloseIcon from "@/components/icons/closeIcon"
+import CloseIconWhite from "@/components/icons/closeIconWhite"
 
 type ModalType = {}
 
@@ -34,7 +35,7 @@ const Modal: FC<PropsWithChildren<ModalType>> = ({ children }) => {
             >
                 <CloseIcon />
             </div>
-            <div>{children}</div>
+            <div className={classes.children}>{children}</div>
         </div>
     )
 }

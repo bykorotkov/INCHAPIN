@@ -23,6 +23,7 @@
     height: 26px;
     cursor: pointer;
     transition: all .25s ease;
+    z-index: 100;
 
     &:hover {
       transform: scale(1.1);
