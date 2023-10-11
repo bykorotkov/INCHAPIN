@@ -119,6 +119,7 @@
 
     .Link {
       @include to-top-hover;
+      cursor: pointer;
 
       &:first-child {
         margin-right: 40px;
@@ -133,6 +134,10 @@
       }
     }
     a {
+      font-weight: 600;
+    }
+
+    span {
       font-weight: 600;
     }
 

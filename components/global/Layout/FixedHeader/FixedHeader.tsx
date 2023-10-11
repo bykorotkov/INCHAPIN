@@ -6,19 +6,20 @@ import Link from "next/link"
 import Image from "next/image"
 import headerLogo from "@/images/header/headerLogo.svg"
 import classNames from "classnames"
-import { useAppSelector } from "@/hooks/redux"
+import { useAppDispatch, useAppSelector } from "@/hooks/redux"
+import { openModal } from "@/store/reducers/modalSlice"
 
 const FixedHeader = () => {
-    const [showFixedHeader, setShowFixedHeader] = useState(false);
-    const {scroll} = useAppSelector(state => state.scrollReducer)
+    const [showFixedHeader, setShowFixedHeader] = useState(false)
+    const { scroll } = useAppSelector((state) => state.scrollReducer)
+    const dispatch = useAppDispatch()
 
     useEffect(() => {
         const handleScroll = () => {
-            setShowFixedHeader(scroll > 100); // показывать фиксированный хедер, если страница прокручена более чем на 100 пикселей
-        };
+            setShowFixedHeader(scroll > 100) // показывать фиксированный хедер, если страница прокручена более чем на 100 пикселей
+        }
         handleScroll()
-
-    }, [scroll]);
+    }, [scroll])
 
     return (
         <div>
@@ -36,9 +37,18 @@ const FixedHeader = () => {
                         <Select />
                     </div>
 
-                    <Link href={'/'} className={classes.Logo}>
-                        <Image src={headerLogo} alt="" />
-                        <Image src={headerLogo} alt="" />
+                    <Link
+                        href={"/"}
+                        className={classes.Logo}
+                    >
+                        <Image
+                            src={headerLogo}
+                            alt=""
+                        />
+                        <Image
+                            src={headerLogo}
+                            alt=""
+                        />
                     </Link>
 
                     <div className={classes.Right}>
@@ -47,11 +57,13 @@ const FixedHeader = () => {
                             <a href="tel:+74955272121">+7 495 527 21 21</a>
                         </div>
 
-                        <div className={classes.Link}>
-                            <a href="#">ЗАКАЗАТЬ ЗВОНОК</a>
-                            <a href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+                        <div
+                            className={classes.Link}
+                            onClick={() => dispatch(openModal("CallbackForm"))}
+                        >
+                            <span>ЗАКАЗАТЬ ЗВОНОК</span>
+                            <span>ЗАКАЗАТЬ ЗВОНОК</span>
                         </div>
-
                     </div>
                 </div>
             </Container>

@@ -8,10 +8,10 @@ import Link from "next/link"
 import Select from "@/components/ui/Select/Select"
 import Container from "@/components/ui/Container/Container"
 import { openModal } from "@/store/reducers/modalSlice"
-import { useDispatch } from "react-redux"
+import { useAppDispatch } from "@/hooks/redux"
 
 const Header = () => {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     return (
         <div>
@@ -53,8 +53,8 @@ const Header = () => {
                             className={classes.Link}
                             onClick={() => dispatch(openModal("CallbackForm"))}
                         >
-                            <a>ЗАКАЗАТЬ ЗВОНОК</a>
-                            <a>ЗАКАЗАТЬ ЗВОНОК</a>
+                            <span>ЗАКАЗАТЬ ЗВОНОК</span>
+                            <span>ЗАКАЗАТЬ ЗВОНОК</span>
                         </div>
                     </div>
                 </div>

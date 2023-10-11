@@ -3,9 +3,7 @@ import Modal from "@/components/global/Modal/Modal"
 import { CSSTransition } from "react-transition-group"
 import classes from "./CallbackForm.module.scss"
 import Button from "@/components/ui/Button/Button"
-import Textarea from "@/components/ui/Textarea/Textarea"
 import Input from "@/components/ui/Input/Input"
-import Checkbox from "@/components/ui/Checkbox/Checkbox"
 
 const CallbackForm = () => {
     const [success, setSuccess] = useState(false)

@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 @media only screen and (min-width: $desktopWide) {
@@ -19,14 +19,14 @@
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
   .Container {
     max-width: 100%;
-    padding: 0 44px;
+    padding: 0 50px;
   }
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
   .Container {
     max-width: 100%;
-    padding: 0 44px;
+    padding: 0 40px;
   }
 }
 

@@ -1,13 +1,19 @@
+@import "../../../../css/common.scss";
+
+
 .BannerBottom {
   position: relative;
+
+
   img {
     width: 567px;
     height: 720px;
+    object-fit: cover;
   }
 
   .ImageDecor {
     position: absolute;
-    top: 188px;
+    top: 75px;
     right: -100px;
     width: 200px;
     height: 200px;
@@ -16,5 +22,93 @@
     justify-content: center;
     background-color: #2F80ED;
     border-radius: 50%;
+
+    svg {
+      width: 49px;
+      height: 68px;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktopWide) {
+  .BannerBottom {
+    img {
+      width: 733px;
+      height: 900px;
+    }
+
+    .ImageDecor {
+      width: 259px;
+      height: 259px;
+      right: -129px;
+      top: 128px;
+
+      svg {
+        width: 63px;
+        height: 88px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+  .BannerBottom {
+    img {
+      width: 408px;
+      height: 514px;
+    }
+
+    .ImageDecor {
+      width: 148px;
+      height: 148px;
+      right: -74px;
+      top: 60px;
+
+      svg {
+        width: 35px;
+        height: 49px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+  .BannerBottom {
+    img {
+      width: 290px;
+      height: 408px;
+    }
+
+    .ImageDecor {
+      width: 81px;
+      height: 81px;
+      right: -40px;
+
+      svg {
+        width: 19px;
+        height: 26px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .BannerBottom {
+    img {
+      width: 296px;
+      height: 420px;
+    }
+
+    .ImageDecor {
+      width: 87px;
+      height: 87px;
+      right: -43px;
+
+      svg {
+        width: 20px;
+        height: 27px;
+      }
+    }
   }
 }

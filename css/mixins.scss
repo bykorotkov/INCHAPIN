@@ -31,7 +31,7 @@
   position: relative;
   overflow: hidden;
 
-  a {
+  a, span {
     position: absolute;
     transition: all .5s ease;
     white-space: nowrap;
@@ -44,7 +44,7 @@
   }
 
   &:hover {
-    a {
+    a, span {
       &:first-child {
         top: -130%;
       }
