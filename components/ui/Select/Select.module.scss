@@ -1,4 +1,5 @@
 @import '../../../css/mixins.scss';
+@import "../../../css/common.scss";
 
 .SelectContainer {
   position: relative;
@@ -40,6 +41,25 @@
     }
 
   }
+
+
 }
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}
+
 
 

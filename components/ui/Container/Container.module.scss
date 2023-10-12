@@ -2,7 +2,7 @@
 
 .Container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -19,7 +19,7 @@
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
   .Container {
     max-width: 100%;
-    padding: 0 50px;
+    padding: 0 30px;
   }
 }
 

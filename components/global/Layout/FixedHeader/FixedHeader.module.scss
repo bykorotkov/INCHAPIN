@@ -83,14 +83,17 @@
   .Logo {
     transition: all .25s ease;
     position: relative;
-    height: 30px;
-    width: 197px;
+    height: 25px;
+    width: 155px;
     overflow: hidden;
 
     img {
       position: absolute;
       transition: all .5s ease;
       white-space: nowrap;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 
       &:first-child {
         top: 0;
@@ -160,6 +163,13 @@
 @media only screen and (min-width: $desktopWide) {
   .Header {
     max-width: 1760px;
+    height: 131px;
+    top: -131px;
+
+    .Logo {
+      width: 187px;
+      height: 30px;
+    }
   }
 
 }
@@ -169,11 +179,22 @@
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
-
+    .Header {
+      height: 123px;
+      top: -123px;
+    }
 }
 
 @media only screen and (max-width: $mobile) {
+  .Header {
+    height: 81px;
+    top: -81px;
 
+    .Logo {
+      width: 130px;
+      height: 21px;
+    }
+  }
 }
 
 

@@ -4,13 +4,6 @@
   padding-bottom: 40px;
   padding-bottom: 1200px;
 
-  .Banner {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
   .Top {
     margin-top: 40px;
     display: flex;
@@ -93,6 +86,7 @@
 
 @media only screen and (min-width: $desktopWide) {
   .Main {
+
     .Top {
       margin-top: 50px;
 
@@ -149,6 +143,7 @@
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
   .Main {
+
     .Top {
       margin-top: 30px;
 
@@ -205,6 +200,7 @@
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
   .Main {
+
     .Top {
       flex-direction: column;
       align-items: flex-start;
@@ -258,6 +254,7 @@
 
 @media only screen and (max-width: $mobile) {
   .Main {
+
     .Top {
       margin-top: 20px;
       flex-direction: column;
