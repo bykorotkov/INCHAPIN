@@ -8,6 +8,7 @@ import headerLogo from "@/images/header/headerLogo.svg"
 import classNames from "classnames"
 import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import { openModal } from "@/store/reducers/modalSlice"
+import PhoneIcon from "@/images/header/phoneIcon.svg"
 
 const FixedHeader = () => {
     const [showFixedHeader, setShowFixedHeader] = useState(false)
@@ -34,7 +35,18 @@ const FixedHeader = () => {
                             </div>
                             <div className={classes.Burger}>Меню</div>
                         </div>
-                        <Select />
+                        <div className={classes.DesktopSelect}>
+                            <Select />
+                        </div>
+                    </div>
+
+                    <div className={classes.TabletPhone}>
+                        <a href="tel:+74955272121">
+                            <Image
+                                src={PhoneIcon}
+                                alt={""}
+                            />
+                        </a>
                     </div>
 
                     <Link
@@ -64,6 +76,19 @@ const FixedHeader = () => {
                             <span>ЗАКАЗАТЬ ЗВОНОК</span>
                             <span>ЗАКАЗАТЬ ЗВОНОК</span>
                         </div>
+                    </div>
+
+                    <div className={classes.TabletSelect}>
+                        <Select />
+                    </div>
+
+                    <div className={classes.MobilePhone}>
+                        <a href="tel:+74955272121">
+                            <Image
+                                src={PhoneIcon}
+                                alt={""}
+                            />
+                        </a>
                     </div>
                 </div>
             </Container>

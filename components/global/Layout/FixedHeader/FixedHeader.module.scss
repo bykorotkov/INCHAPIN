@@ -8,11 +8,14 @@
   height: 100px;
   position: fixed;
   top: -100px;
-  max-width: 1360px;
+  max-width: 100%;
   width: 100%;
   z-index: 20;
   background-color: #fff;
   transition: all .25s ease;
+  padding: 0 40px;
+  left: 0;
+
 
   &.show {
     top: 0;
@@ -33,7 +36,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 18px;
+        height: 14px;
         cursor: pointer;
 
         .Line {
@@ -158,30 +161,110 @@
       text-transform: uppercase;
     }
   }
+
+  .TabletPhone {
+    display: none;
+  }
+
+  .TabletSelect {
+    display: none;
+  }
+
+  .MobilePhone {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $desktopWide) {
   .Header {
-    max-width: 1760px;
+    max-width: 1920px;
     height: 131px;
     top: -131px;
+    left: 0;
+    padding: 0 80px;
 
     .Logo {
       width: 187px;
       height: 30px;
+    }
+
+    .Left {
+      .BurgerContainer {
+        .Burger {
+          font-size: 15px;
+          line-height: 15px;
+        }
+
+        .BurgerItems {
+          width: 38px;
+          height: 17px;
+        }
+      }
     }
   }
 
 }
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+    .Header {
+      .Left {
+        .BurgerContainer {
+          .Burger {
+            font-size: 12px;
+            line-height: 12px;
+          }
 
+          .BurgerItems {
+            width: 32px;
+            height: 14px;
+          }
+        }
+      }
+    }
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
     .Header {
       height: 123px;
       top: -123px;
+
+      .DesktopSelect {
+        display: none;
+      }
+
+      .TabletPhone {
+        display: flex;
+        border-radius: 100px;
+        border: 1px solid #D7D7D7;
+        padding: 15px;
+
+        a {
+          display: flex;
+        }
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .Right {
+        display: none;
+      }
+
+      .TabletSelect {
+        display: block;
+      }
+
+      .Left {
+        .BurgerContainer {
+          .Burger {
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+      }
     }
 }
 
@@ -189,10 +272,46 @@
   .Header {
     height: 81px;
     top: -81px;
+    padding: 0 20px;
 
     .Logo {
       width: 130px;
       height: 21px;
+    }
+
+    .Left {
+      .BurgerContainer {
+        margin-right: 0;
+        .Burger {
+          display: none;
+        }
+
+        .BurgerItems {
+          width: 29px;
+          height: 14px;
+        }
+      }
+    }
+
+    .Right{
+      display: none;
+    }
+
+    .MobilePhone {
+      display: flex;
+      border-radius: 100px;
+      border: 1px solid #2F80ED;
+      padding: 13px;
+
+      a {
+        display: flex;
+      }
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

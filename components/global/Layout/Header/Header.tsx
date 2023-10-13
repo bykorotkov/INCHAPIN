@@ -1,5 +1,4 @@
 "use client"
-
 import React from "react"
 import classes from "./Header.module.scss"
 import Image from "next/image"
@@ -9,6 +8,7 @@ import Select from "@/components/ui/Select/Select"
 import Container from "@/components/ui/Container/Container"
 import { openModal } from "@/store/reducers/modalSlice"
 import { useAppDispatch } from "@/hooks/redux"
+import PhoneIcon from "@/images/header/phoneIcon.svg"
 
 const Header = () => {
     const dispatch = useAppDispatch()
@@ -26,7 +26,18 @@ const Header = () => {
                             </div>
                             <div className={classes.Burger}>Меню</div>
                         </div>
-                        <Select />
+                        <div className={classes.DesktopSelect}>
+                            <Select />
+                        </div>
+                    </div>
+
+                    <div className={classes.TabletPhone}>
+                        <a href="tel:+74955272121">
+                            <Image
+                                src={PhoneIcon}
+                                alt={""}
+                            />
+                        </a>
                     </div>
 
                     <Link
@@ -56,6 +67,19 @@ const Header = () => {
                             <span>ЗАКАЗАТЬ ЗВОНОК</span>
                             <span>ЗАКАЗАТЬ ЗВОНОК</span>
                         </div>
+                    </div>
+
+                    <div className={classes.TabletSelect}>
+                        <Select />
+                    </div>
+
+                    <div className={classes.MobilePhone}>
+                        <a href="tel:+74955272121">
+                            <Image
+                                src={PhoneIcon}
+                                alt={""}
+                            />
+                        </a>
                     </div>
                 </div>
             </Container>

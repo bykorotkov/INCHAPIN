@@ -4,10 +4,28 @@
 .SelectContainer {
   position: relative;
   transition: all .25s ease;
+  height: 43px;
+
+  .Select {
+    background-color: #2F80ED;
+    color: #fff;
+    border-radius: 100px;
+    width: 203px;
+    border-color: #2F80ED;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 13px;
+    cursor: pointer;
+    transition: all .25s ease;
+    padding: 0 0 0 12px;
+    white-space: nowrap;
+    height: 100%;
+  }
 
   .Spans {
     position: absolute;
-    top: 13px;
+    top: 15px;
     left: 20px;
     height: 20px;
     overflow: hidden;
@@ -27,11 +45,9 @@
       top: 0;
       text-transform: uppercase;
       letter-spacing: 0.7px;
-
       @include to-top-hover;
+      //overflow: initial;
     }
-
-
   }
   &:hover {
     .Spans {
@@ -39,26 +55,68 @@
         top: -100%;
       }
     }
-
   }
-
-
 }
 
 @media only screen and (min-width: $desktopWide) {
+    .SelectContainer {
+      height: 51px;
+      .Select {
+        width: 240px;
+        height: 100%;
+      }
+      .Spans {
+        top: 18px;
+        left: 25px;
 
+        span {
+          font-size: 15px;
+          line-height: 15px;
+          width: 162px;
+        }
+      }
+    }
 }
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+    .SelectContainer {
+      height: 43px;
 
+      .Select {
+        width: 192px;
+      }
+
+      .Spans {
+        top: 16px;
+        span {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+    .SelectContainer {
+      height: 43px;
 
+      .Select {
+        width: 188px;
+      }
+
+      .Spans {
+        span {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
 }
 
 @media only screen and (max-width: $mobile) {
-
+    .SelectContainer {
+      display: none;
+    }
 }
 
 
