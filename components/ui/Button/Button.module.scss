@@ -26,13 +26,38 @@
   }
 }
 
-@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+@media only screen and (min-width: $desktopWide) {
+    .Wrap {
+      height: 63px;
+      font-size: 15px;
+      line-height: 15px;
+    }
+}
 
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+  .Wrap {
+    height: 54px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+  .Wrap {
+    height: 54px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 40px;
+  }
 }
 
 @media only screen and (max-width: $mobile) {
   .Wrap {
-    height: 38px;
-    font-size: 14px;
+    height: 47px;
+    font-size: 11px;
+    line-height: 11px;
+    padding: 0 50px;
+    letter-spacing: 0.77px;
   }
 }

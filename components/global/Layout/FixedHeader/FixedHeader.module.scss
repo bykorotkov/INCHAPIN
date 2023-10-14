@@ -177,7 +177,8 @@
 
 @media only screen and (min-width: $desktopWide) {
   .Header {
-    max-width: 1920px;
+    //max-width: 1920px;
+    max-width: 100%;
     height: 131px;
     top: -131px;
     left: 0;
@@ -186,6 +187,7 @@
     .Logo {
       width: 187px;
       height: 30px;
+      margin-right: 90px;
     }
 
     .Left {
@@ -207,6 +209,7 @@
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
     .Header {
+      padding: 0 30px;
       .Left {
         .BurgerContainer {
           .Burger {
@@ -227,6 +230,7 @@
     .Header {
       height: 123px;
       top: -123px;
+      padding: 0 40px;
 
       .DesktopSelect {
         display: none;

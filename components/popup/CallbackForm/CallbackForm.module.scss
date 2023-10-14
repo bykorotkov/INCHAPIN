@@ -21,12 +21,13 @@
     display: flex;
     margin-top: 50px;
     margin-bottom: 30px;
+    justify-content: center;
   }
 
   .Text {
     font-size: 12px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 17px;
     text-align: center;
     opacity: 0.5;
 
@@ -86,14 +87,98 @@
   }
 }
 
+@media only screen and (min-width: $desktopWide) {
+    .Form {
+      width: 587px;
+      max-width: 587px;
+
+      .Title {
+        font-size: 52px;
+        line-height: 62px;
+        margin-bottom: 80px;
+      }
+
+      .Input {
+        margin-bottom: 49px;
+      }
+
+      .Agreement {
+          .Text {
+            font-size: 14px;
+            line-height: 20px;
+          }
+      }
+    }
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+    .Form {
+      width: 370px;
+      max-width: 370px;
+
+      .Title {
+        font-size: 28px;
+        line-height: 39px;
+      }
+
+      .Input {
+        margin-bottom: 40px;
+      }
+
+      .Agreement {
+        .Text {
+          font-size: 11px;
+          line-height: 17px;
+        }
+      }
+    }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+    .Form {
+      width: 438px;
+      max-width: 438px;
+
+      .Title {
+        font-size: 28px;
+        line-height: 39px;
+      }
+
+      .Input {
+        margin-bottom: 45px;
+      }
+
+      .Agreement {
+        .Text {
+          font-size: 11px;
+          line-height: 17px;
+        }
+      }
+    }
+}
+
 
 @media only screen and (max-width: $mobile) {
   .Form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+
     .Title {
-      font-size: 18px;
-      line-height: 1.4;
+      font-size: 20px;
+      line-height: 28px;
       text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .Agreement {
+      margin-top: 40px;
       margin-bottom: 20px;
+
+      .Text {
+        font-size: 12px;
+        line-height: 19px;
+      }
     }
 
     .Text {
@@ -101,7 +186,6 @@
     }
 
     .Button {
-      width: 100%;
     }
   }
 }

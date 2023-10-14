@@ -15,74 +15,74 @@ const Header = () => {
 
     return (
         <div>
-            <Container>
-                <div className={classes.Header}>
-                    <div className={classes.Left}>
-                        <div className={classes.BurgerContainer}>
-                            <div className={classes.BurgerItems}>
-                                <div className={classes.Line}></div>
-                                <div className={classes.Line}></div>
-                                <div className={classes.Line}></div>
-                            </div>
-                            <div className={classes.Burger}>Меню</div>
+            {/*<Container>*/}
+            <div className={classes.Header}>
+                <div className={classes.Left}>
+                    <div className={classes.BurgerContainer}>
+                        <div className={classes.BurgerItems}>
+                            <div className={classes.Line}></div>
+                            <div className={classes.Line}></div>
+                            <div className={classes.Line}></div>
                         </div>
-                        <div className={classes.DesktopSelect}>
-                            <Select />
-                        </div>
+                        <div className={classes.Burger}>Меню</div>
                     </div>
-
-                    <div className={classes.TabletPhone}>
-                        <a href="tel:+74955272121">
-                            <Image
-                                src={PhoneIcon}
-                                alt={""}
-                            />
-                        </a>
-                    </div>
-
-                    <Link
-                        href={"/"}
-                        className={classes.Logo}
-                    >
-                        <Image
-                            src={headerLogo}
-                            alt=""
-                        />
-                        <Image
-                            src={headerLogo}
-                            alt=""
-                        />
-                    </Link>
-
-                    <div className={classes.Right}>
-                        <div className={classes.Link}>
-                            <a href="tel:+74955272121">+7 495 527 21 21</a>
-                            <a href="tel:+74955272121">+7 495 527 21 21</a>
-                        </div>
-
-                        <div
-                            className={classes.Link}
-                            onClick={() => dispatch(openModal("CallbackForm"))}
-                        >
-                            <span>ЗАКАЗАТЬ ЗВОНОК</span>
-                            <span>ЗАКАЗАТЬ ЗВОНОК</span>
-                        </div>
-                    </div>
-
-                    <div className={classes.TabletSelect}>
+                    <div className={classes.DesktopSelect}>
                         <Select />
                     </div>
+                </div>
 
-                    <div className={classes.MobilePhone}>
-                        <a href="tel:+74955272121">
-                            <Image
-                                src={PhoneIcon}
-                                alt={""}
-                            />
-                        </a>
+                <div className={classes.TabletPhone}>
+                    <a href="tel:+74955272121">
+                        <Image
+                            src={PhoneIcon}
+                            alt={""}
+                        />
+                    </a>
+                </div>
+
+                <Link
+                    href={"/"}
+                    className={classes.Logo}
+                >
+                    <Image
+                        src={headerLogo}
+                        alt=""
+                    />
+                    <Image
+                        src={headerLogo}
+                        alt=""
+                    />
+                </Link>
+
+                <div className={classes.Right}>
+                    <div className={classes.Link}>
+                        <a href="tel:+74955272121">+7 495 527 21 21</a>
+                        <a href="tel:+74955272121">+7 495 527 21 21</a>
+                    </div>
+
+                    <div
+                        className={classes.Link}
+                        onClick={() => dispatch(openModal("CallbackForm"))}
+                    >
+                        <span>ЗАКАЗАТЬ ЗВОНОК</span>
+                        <span>ЗАКАЗАТЬ ЗВОНОК</span>
                     </div>
                 </div>
-            </Container>
+
+                <div className={classes.TabletSelect}>
+                    <Select />
+                </div>
+
+                <div className={classes.MobilePhone}>
+                    <a href="tel:+74955272121">
+                        <Image
+                            src={PhoneIcon}
+                            alt={""}
+                        />
+                    </a>
+                </div>
+            </div>
+            {/*</Container>*/}
         </div>
     )
 }

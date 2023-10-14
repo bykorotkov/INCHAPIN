@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  padding: 0 40px;
 
   .Left {
     display: flex;
@@ -163,10 +164,12 @@
 @media only screen and (min-width: $desktopWide) {
     .Header {
       height: 131px;
+      padding: 0 80px;
 
       .Logo {
         width: 187px;
         height: 30px;
+        margin-right: 90px;
       }
 
       .Left {
@@ -187,6 +190,7 @@
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
     .Header {
+      padding: 0 30px;
       .Left {
         .BurgerContainer {
           .Burger {
@@ -206,6 +210,7 @@
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
   .Header {
     height: 123px;
+    padding: 0 40px;
 
     .DesktopSelect {
       display: none;
@@ -250,6 +255,7 @@
 @media only screen and (max-width: $mobile) {
   .Header {
     height: 81px;
+    padding: 0 20px;
 
     .Logo {
       width: 130px;
