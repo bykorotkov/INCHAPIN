@@ -12,7 +12,7 @@ const Video = () => {
     const handleVideoLoadedMetadata = () => {
         const videoElement = document.getElementById("Video-player")
         if (videoElement) {
-            videoElement.requestFullscreen()
+            // videoElement.requestFullscreen()
             videoElement.addEventListener("fullscreenchange", handleFullscreenChange)
         }
     }
@@ -46,6 +46,7 @@ const Video = () => {
             {showVideo && (
                 <video
                     id="Video-player"
+                    className={classes.VideoPlayer}
                     controls
                     onLoadedMetadata={handleVideoLoadedMetadata}
                 >
