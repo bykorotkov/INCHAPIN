@@ -9,7 +9,7 @@ const VideoForm = () => {
     const dispatch = useAppDispatch()
     const handleVideoLoadedMetadata = () => {
         const videoElement = document.getElementById("VideoContainer")
-        if (videoElement && videoElement) {
+        if (videoElement) {
             videoElement.requestFullscreen()
             videoElement.addEventListener("fullscreenchange", handleFullscreenChange)
         }
@@ -19,7 +19,7 @@ const VideoForm = () => {
         const videoElement = document.getElementById("VideoContainer") as HTMLVideoElement
         const video = document.getElementById("Video-player") as HTMLVideoElement
         if (videoElement && document.fullscreenElement === videoElement) {
-            video.volume = 0.2
+            video.volume = 0
             video.play()
         } else {
             handleClose()

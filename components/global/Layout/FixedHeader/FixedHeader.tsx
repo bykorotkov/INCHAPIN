@@ -40,13 +40,14 @@ const FixedHeader = () => {
                         </div>
                     </div>
 
-                    <div className={classes.TabletPhone}>
-                        <a href="tel:+74955272121">
-                            <Image
-                                src={PhoneIcon}
-                                alt={""}
-                            />
-                        </a>
+                    <div
+                        className={classes.TabletPhone}
+                        onClick={() => dispatch(openModal("CallbackForm"))}
+                    >
+                        <Image
+                            src={PhoneIcon}
+                            alt={""}
+                        />
                     </div>
 
                     <Link
@@ -82,13 +83,14 @@ const FixedHeader = () => {
                         <Select />
                     </div>
 
-                    <div className={classes.MobilePhone}>
-                        <a href="tel:+74955272121">
-                            <Image
-                                src={PhoneIcon}
-                                alt={""}
-                            />
-                        </a>
+                    <div
+                        className={classes.MobilePhone}
+                        onClick={() => dispatch(openModal("CallbackForm"))}
+                    >
+                        <Image
+                            src={PhoneIcon}
+                            alt={""}
+                        />
                     </div>
                 </div>
             </Container>
