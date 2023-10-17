@@ -1,4 +1,5 @@
-import React from "react"
+"use client"
+import React, { useState } from "react"
 import ReactSelect from "react-select"
 import classes from "./Select.module.scss"
 
@@ -8,42 +9,26 @@ interface OptionsType {
 }
 
 const options: OptionsType[] = [
-    { value: "Визуальный выбор", label: "Визуальный выбор" },
-    { value: "Выбор по параметрам", label: "Выбор по параметрам" }
+    { value: "/VisualPage", label: "Визуальный выбор" },
+    { value: "/ParametersPage", label: "Выбор по параметрам" }
 ]
 
 const colorStyles = {
-    control: (styles: any) => ({
-        // ...styles
-        // backgroundColor: "#2F80ED", color: "#fff", borderRadius: "100px", width: "203px", borderColor: "#2F80ED", textTransform: "uppercase", letterSpacing: "1px", fontSize: "13px", lineHeight: "13px", cursor: "pointer", transition: "all .25s ease", padding: "0 0 0 12px", whiteSpace: "nowrap"
-    }),
+    control: (styles: any) => ({}),
+    menu: (styles: any) => ({ ...styles, width: "100%", minWidth: "100%", left: "0" }),
     option: (styles: any) => {
-        return { ...styles, cursor: "pointer", color: "#000", padding: "15px" }
-    },
-    placeholder: (styles: any) => ({
-        ...styles,
-        color: "#fff",
-        fontSize: "13px",
-        fontWeight: "600",
-        position: "absolute",
-        top: "30%",
-        transition: "all .25s ease",
-        overflow: "hidden",
-        "&:hover": {
-            top: "-130%"
-        }
-    }),
-    dropdownIndicator: (styles: any) => ({
-        // ...styles,
-        // color: "#fff",
-        // padding: "8px 20px 8px 2px",
-        // "&:hover": {
-        //     color: "#fff"
-        // }
-    })
+        return { ...styles, cursor: "pointer", color: "#000", textAlign: "center", padding: "15px 0" }
+    }
 }
 
 const Select = () => {
+    const [selectedOption, setSelectedOption] = useState(null)
+
+    function handleChange(selected: any) {
+        setSelectedOption(selected.value)
+        window.location.href = selected.value
+    }
+
     return (
         <div className={classes.SelectContainer}>
             <ReactSelect
@@ -51,13 +36,14 @@ const Select = () => {
                 styles={colorStyles}
                 placeholder=""
                 components={{
-                    IndicatorSeparator: () => null
-                    // DropdownIndicator: () => null
+                    IndicatorSeparator: () => null,
+                    DropdownIndicator: () => null
                 }}
                 className={classes.Select}
                 isSearchable={false}
                 isClearable={false}
                 value={null}
+                onChange={handleChange}
             />
             <div className={classes.Spans}>
                 <span>Выбрать квартиру</span>

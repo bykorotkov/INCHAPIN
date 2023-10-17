@@ -178,6 +178,13 @@
       .Text {
         font-size: 12px;
         line-height: 19px;
+
+        a {
+          text-decoration: underline;
+          &:before {
+            display: none;
+          }
+        }
       }
     }
 

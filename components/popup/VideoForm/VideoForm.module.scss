@@ -45,6 +45,11 @@
 }
 
 @media only screen and (max-width: $mobile) {
+  .VideoContainer {
+    z-index: 101;
+    position: relative;
+  }
+
   .closeIcon {
     display: none;
   }

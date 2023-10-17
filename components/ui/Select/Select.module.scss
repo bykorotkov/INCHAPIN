@@ -21,6 +21,18 @@
     padding: 0 0 0 12px;
     white-space: nowrap;
     height: 100%;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      background: url("../../../images/header/arrowIcon.svg") no-repeat center / contain;
+      width: 12px;
+      height: 13px;
+      pointer-events: none;
+    }
   }
 
   .Spans {
@@ -46,7 +58,6 @@
       text-transform: uppercase;
       letter-spacing: 0.7px;
       @include to-top-hover;
-      //overflow: initial;
     }
   }
   &:hover {
@@ -64,6 +75,13 @@
       .Select {
         width: 240px;
         height: 100%;
+
+        &:before {
+          width: 14px;
+          height: 15px;
+          top: 17px;
+          right: 27px;
+        }
       }
       .Spans {
         top: 18px;
@@ -102,6 +120,11 @@
 
       .Select {
         width: 188px;
+
+        &:before {
+          right: 18px;
+          height: 11px;
+        }
       }
 
       .Spans {

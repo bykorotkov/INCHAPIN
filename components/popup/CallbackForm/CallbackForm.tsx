@@ -62,7 +62,10 @@ const CallbackForm = () => {
         bodyFormData.append("email", formData.email)
         bodyFormData.append("title", title)
 
-        console.log(title, formData.name, formData.phone, formData.email)
+        console.log("Page Title:", title)
+        console.log("Name Field:", formData.name)
+        console.log("Phone Field:", formData.phone)
+        console.log("Email Field:", formData.email)
 
         if (!errors) {
             setSuccess(true)

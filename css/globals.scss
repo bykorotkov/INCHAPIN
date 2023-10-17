@@ -145,37 +145,10 @@ button {
   opacity: 1 !important;
 }
 
-.css-tj5bde-Svg {
-  position: absolute;
-  top: 9px;
-  right: 15px;
-}
-
 .css-1g8ily9-Control {
   height: 100%;
 }
 
-@media only screen and (min-width: $desktopWide) {
-  .css-tj5bde-Svg {
-    top: 15px;
-    right: 25px;
-  }
-}
 
-@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
-  .css-tj5bde-Svg {
-    top: 10px;
-  }
-}
-
-@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
-  .css-tj5bde-Svg {
-    top: 10px;
-  }
-}
-
-@media only screen and (max-width: $mobile) {
-
-}
 
 

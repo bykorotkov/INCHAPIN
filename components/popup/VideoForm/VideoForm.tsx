@@ -23,7 +23,7 @@ const VideoForm = () => {
         const videoElement = document.getElementById("VideoContainer") as HTMLVideoElement
         const video = document.getElementById("Video-player") as HTMLVideoElement
         if (videoElement && document.fullscreenElement === videoElement) {
-            video.volume = 0
+            video.volume = 0.1
             video.play()
         } else {
             handleClose()
