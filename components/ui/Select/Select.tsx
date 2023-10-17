@@ -14,7 +14,7 @@ const options: OptionsType[] = [
 ]
 
 const colorStyles = {
-    control: (styles: any) => ({}),
+    control: (styles: any) => ({ ...styles, height: "100%", opacity: 0, cursor: "pointer", left: "-6px" }),
     menu: (styles: any) => ({ ...styles, width: "100%", minWidth: "100%", left: "0" }),
     option: (styles: any) => {
         return { ...styles, cursor: "pointer", color: "#000", textAlign: "center", padding: "15px 0" }
