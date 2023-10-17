@@ -4,10 +4,14 @@ import classes from "./VideoForm.module.scss"
 import { closeModal } from "@/store/reducers/modalSlice"
 import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import CloseIconWhite from "@/components/icons/closeIconWhite"
+import useWindowSize from "@/hooks/useWindowSize"
 
 const VideoForm = () => {
     const dispatch = useAppDispatch()
+    const { width } = useWindowSize()
     const handleVideoLoadedMetadata = () => {
+        if (width < 768) return
+
         const videoElement = document.getElementById("VideoContainer")
         if (videoElement) {
             videoElement.requestFullscreen()

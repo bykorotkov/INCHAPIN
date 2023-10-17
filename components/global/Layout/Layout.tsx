@@ -69,7 +69,7 @@ const Layout = ({ children }: LayoutType) => {
             </CSSTransition>
             <CSSTransition
                 in={name === "VideoForm"}
-                timeout={200}
+                timeout={0}
                 mountOnEnter={true}
                 unmountOnExit={true}
             >
