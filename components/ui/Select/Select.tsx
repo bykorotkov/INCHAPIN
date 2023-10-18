@@ -53,4 +53,4 @@ const Select = () => {
     )
 }
 
-export default Select
+export default React.memo(Select)

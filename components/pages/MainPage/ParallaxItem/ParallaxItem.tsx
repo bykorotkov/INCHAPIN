@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import classes from "./ParallaxItem.module.scss"
 import Image from "next/image"
 import aboutBanner from "@/images/MainPage/AboutBanner1440.jpg"
@@ -13,13 +13,11 @@ const ParallaxItem = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // const scrollY = window.scrollY;
             const newTranslateY = -scroll * 0.02
             setTranslateY(newTranslateY)
         }
 
         const handleScrollIcon = () => {
-            // const scrollY = window.scrollY;
             const newTranslateY = -scroll * 0.12
             setTranslateYIcon(newTranslateY)
         }
