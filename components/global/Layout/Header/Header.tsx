@@ -15,7 +15,6 @@ const Header = () => {
 
     return (
         <div>
-            {/*<Container>*/}
             <div className={classes.Header}>
                 <div className={classes.Left}>
                     <div className={classes.BurgerContainer}>
@@ -84,7 +83,6 @@ const Header = () => {
                     />
                 </div>
             </div>
-            {/*</Container>*/}
         </div>
     )
 }

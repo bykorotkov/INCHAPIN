@@ -1,8 +1,8 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Modal from "@/components/global/Modal/Modal"
 import classes from "./VideoForm.module.scss"
 import { closeModal } from "@/store/reducers/modalSlice"
-import { useAppDispatch, useAppSelector } from "@/hooks/redux"
+import { useAppDispatch } from "@/hooks/redux"
 import CloseIconWhite from "@/components/icons/closeIconWhite"
 import useWindowSize from "@/hooks/useWindowSize"
 

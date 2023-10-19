@@ -2,11 +2,26 @@ import type { Metadata } from "next"
 import "../css/globals.scss"
 
 export const metadata: Metadata = {
-    icons: {
-        icon: "/favicon/favicon.ico",
-        apple: "/favicon/apple-touch-icon.png"
-    },
-    title: 'Главная'
+    icons: [
+        {
+            url: "/favicon/favicon.ico",
+            type: "image/ico",
+            rel: "icon"
+        },
+        {
+            url: "/favicon/favicon-16x16.png",
+            type: "image/png",
+            rel: "icon",
+            sizes: "16x16"
+        },
+        {
+            url: "/favicon/favicon-32x32.png",
+            type: "image/png",
+            rel: "icon",
+            sizes: "32x32"
+        }
+    ],
+    title: "Главная"
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

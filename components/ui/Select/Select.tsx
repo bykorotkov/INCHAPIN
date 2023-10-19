@@ -22,6 +22,7 @@ const colorStyles = {
 }
 
 const Select = () => {
+    console.log("select renders")
     const [selectedOption, setSelectedOption] = useState(null)
 
     function handleChange(selected: any) {
@@ -32,6 +33,7 @@ const Select = () => {
     return (
         <div className={classes.SelectContainer}>
             <ReactSelect
+                instanceId={"select-id"}
                 options={options}
                 styles={colorStyles}
                 placeholder=""
@@ -54,3 +56,4 @@ const Select = () => {
 }
 
 export default React.memo(Select)
+// export default Select

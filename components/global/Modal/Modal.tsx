@@ -1,9 +1,8 @@
-import React, { FC, MutableRefObject, PropsWithChildren, useEffect, useRef } from "react"
+import React, { FC, PropsWithChildren, useEffect } from "react"
 import classes from "./Modal.module.scss"
 import { closeModal } from "@/store/reducers/modalSlice"
 import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import CloseIcon from "@/components/icons/closeIcon"
-import CloseIconWhite from "@/components/icons/closeIconWhite"
 
 type ModalType = {}
 
