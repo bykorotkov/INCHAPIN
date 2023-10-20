@@ -15,22 +15,21 @@ const Banner = () => {
                     src={banner}
                     alt=""
                 />
-            ) : (
-                  <Image
-                      src={bannerTablet}
-                      alt=""
-                  />
-              ) && width < 769 ? (
-                <Image
-                    src={bannerMobile}
-                    alt=""
-                />
-            ) : (
+            ) : null}
+
+            {width <= 1024 && width > 768 ? (
                 <Image
                     src={bannerTablet}
                     alt=""
                 />
-            )}
+            ) : null}
+
+            {width <= 768 ? (
+                <Image
+                    src={bannerMobile}
+                    alt=""
+                />
+            ) : null}
         </div>
     )
 }
