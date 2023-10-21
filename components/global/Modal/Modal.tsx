@@ -34,7 +34,7 @@ const Modal: FC<PropsWithChildren<ModalType>> = ({ children }) => {
             >
                 <CloseIcon />
             </div>
-            <div className={classes.children}>{children}</div>
+            {children}
         </div>
     )
 }

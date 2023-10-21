@@ -2,252 +2,180 @@
 
 .Main {
   padding-bottom: 40px;
-  //padding-bottom: 1200px;
 
-  .Top {
-    margin-top: 40px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-
-    .LeftText {
-      span {
-        color: #2F80ED;
-        font-size: 26px;
-        line-height: 36px;
-        text-transform: uppercase;
-        font-weight: 400;
-      }
-    }
-
-    .InchapLogo {
-      img {
-        width: auto;
-        height: 114px;
-      }
-
-    }
-  }
-
-  .Bottom {
-    margin-top: 110px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    max-width: 1247px;
-
-    .Left {
-      .About {
-        text-transform: uppercase;
-        font-size: 13px;
-        line-height: 18px;
-        text-align: right;
-        color: #2F80ED;
-        margin-bottom: 40px;
-      }
-    }
-
-    .Right {
-      max-width: 454px;
-
-      .DecorRow {
-        width: 49px;
-        height: 9px;
-        background-color: #2F80ED;
-        border-radius: 2px;
-        margin-bottom: 50px;
-      }
-      .TextHead {
-        font-size: 26px;
-        line-height: 36px;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 100px;
-
-        span {
-          color: #2F80ED;
-        }
-      }
-
-      .TextBody {
-        font-size: 16px;
-        line-height: 25px;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 96px;
-
-        span {
-          color: #2F80ED;
-        }
-      }
-    }
-  }
+  //.Bottom {
+  //  margin-top: 110px;
+  //  display: flex;
+  //  align-items: flex-end;
+  //  justify-content: space-between;
+  //  max-width: 1247px;
+  //
+  //  .Left {
+  //    .About {
+  //      text-transform: uppercase;
+  //      font-size: 13px;
+  //      line-height: 18px;
+  //      text-align: right;
+  //      color: #2F80ED;
+  //      margin-bottom: 40px;
+  //    }
+  //  }
+  //
+  //  .Right {
+  //    max-width: 454px;
+  //
+  //    .DecorRow {
+  //      width: 49px;
+  //      height: 9px;
+  //      background-color: #2F80ED;
+  //      border-radius: 2px;
+  //      margin-bottom: 50px;
+  //    }
+  //    .TextHead {
+  //      font-size: 26px;
+  //      line-height: 36px;
+  //      font-weight: 400;
+  //      text-transform: uppercase;
+  //      margin-bottom: 100px;
+  //
+  //      span {
+  //        color: #2F80ED;
+  //      }
+  //    }
+  //
+  //    .TextBody {
+  //      font-size: 16px;
+  //      line-height: 25px;
+  //      font-weight: 400;
+  //      text-transform: uppercase;
+  //      margin-bottom: 96px;
+  //
+  //      span {
+  //        color: #2F80ED;
+  //      }
+  //    }
+  //  }
+  //}
 }
 
 @media only screen and (min-width: $desktopWide) {
   .Main {
 
-    .Top {
-      margin-top: 50px;
-
-      .LeftText {
-        span {
-          font-size: 31px;
-          line-height: 43px;
-        }
-      }
-
-      .InchapLogo {
-        img {
-          height: 137px;
-        }
-      }
-    }
-
-    .Bottom {
-      margin-top: 150px;
-      max-width: 1613px;
-
-      .Left {
-        .About {
-          margin-bottom: 70px;
-          font-size: 17px;
-          line-height: 24px;
-        }
-      }
-
-      .Right {
-        max-width: 587px;
-
-        .DecorRow {
-          width: 63px;
-          height: 12px;
-          margin-bottom: 65px;
-        }
-
-        .TextHead {
-          font-size: 34px;
-          line-height: 47px;
-          margin-top: 120px;
-        }
-
-        .TextBody {
-          font-size: 20px;
-          line-height: 32px;
-          margin-bottom: 100px;
-        }
-      }
-    }
+    //.Bottom {
+    //  margin-top: 150px;
+    //  max-width: 1613px;
+    //
+    //  .Left {
+    //    .About {
+    //      margin-bottom: 70px;
+    //      font-size: 17px;
+    //      line-height: 24px;
+    //    }
+    //  }
+    //
+    //  .Right {
+    //    max-width: 587px;
+    //
+    //    .DecorRow {
+    //      width: 63px;
+    //      height: 12px;
+    //      margin-bottom: 65px;
+    //    }
+    //
+    //    .TextHead {
+    //      font-size: 34px;
+    //      line-height: 47px;
+    //      margin-top: 120px;
+    //    }
+    //
+    //    .TextBody {
+    //      font-size: 20px;
+    //      line-height: 32px;
+    //      margin-bottom: 100px;
+    //    }
+    //  }
+    //}
   }
 }
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
   .Main {
 
-    .Top {
-      margin-top: 30px;
-
-      .LeftText {
-        span {
-          font-size: 19px;
-          line-height: 26px;
-        }
-      }
-
-      .InchapLogo {
-        img {
-          height: 88px;
-        }
-      }
-    }
-
-    .Bottom {
-      margin-top: 120px;
-      max-width: 890px;
-
-      .Left {
-        .About {
-          font-size: 11px;
-          line-height: 15px;
-          margin-bottom: 20px;
-        }
-      }
-
-      .Right {
-        max-width: 334px;
-
-        .DecorRow {
-          width: 35px;
-          height: 6px;
-          margin-bottom: 35px;
-        }
-
-        .TextHead {
-          font-size: 19px;
-          line-height: 26px;
-          margin-bottom: 65px;
-        }
-
-        .TextBody {
-          font-size: 12px;
-          line-height: 21px;
-          margin-bottom: 60px;
-        }
-      }
-    }
+    //.Bottom {
+    //  margin-top: 120px;
+    //  max-width: 890px;
+    //
+    //  .Left {
+    //    .About {
+    //      font-size: 11px;
+    //      line-height: 15px;
+    //      margin-bottom: 20px;
+    //    }
+    //  }
+    //
+    //  .Right {
+    //    max-width: 334px;
+    //
+    //    .DecorRow {
+    //      width: 35px;
+    //      height: 6px;
+    //      margin-bottom: 35px;
+    //    }
+    //
+    //    .TextHead {
+    //      font-size: 19px;
+    //      line-height: 26px;
+    //      margin-bottom: 65px;
+    //    }
+    //
+    //    .TextBody {
+    //      font-size: 12px;
+    //      line-height: 21px;
+    //      margin-bottom: 60px;
+    //    }
+    //  }
+    //}
   }
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
   .Main {
 
-    .Top {
-      flex-direction: column;
-      align-items: flex-start;
-
-      .InchapLogo {
-        margin-top: 43px;
-        img {
-          height: auto;
-          width: 100%;
-        }
-      }
-    }
-    .Bottom {
-      margin-top: 90px;
-      max-width: 718px;
-
-      .Left {
-        margin-left: -40px;
-        .About {
-          font-size: 11px;
-          line-height: 15px;
-          margin-bottom: 20px;
-        }
-      }
-
-      .Right {
-        max-width: 334px;
-
-        .DecorRow {
-          width: 35px;
-          height: 6px;
-          margin-bottom: 30px;
-        }
-
-        .TextHead {
-          font-size: 19px;
-          line-height: 26px;
-          margin-bottom: 20px;
-        }
-
-        .TextBody {
-          font-size: 12px;
-          line-height: 21px;
-          margin-bottom: 30px;
-        }
-      }
-    }
+    //.Bottom {
+    //  margin-top: 90px;
+    //  max-width: 718px;
+    //
+    //  .Left {
+    //    margin-left: -40px;
+    //    .About {
+    //      font-size: 11px;
+    //      line-height: 15px;
+    //      margin-bottom: 20px;
+    //    }
+    //  }
+    //
+    //  .Right {
+    //    max-width: 334px;
+    //
+    //    .DecorRow {
+    //      width: 35px;
+    //      height: 6px;
+    //      margin-bottom: 30px;
+    //    }
+    //
+    //    .TextHead {
+    //      font-size: 19px;
+    //      line-height: 26px;
+    //      margin-bottom: 20px;
+    //    }
+    //
+    //    .TextBody {
+    //      font-size: 12px;
+    //      line-height: 21px;
+    //      margin-bottom: 30px;
+    //    }
+    //  }
+    //}
   }
 
 }
@@ -255,65 +183,44 @@
 @media only screen and (max-width: $mobile) {
   .Main {
 
-    .Top {
-      margin-top: 20px;
-      flex-direction: column;
-      align-items: flex-start;
-
-      .LeftText {
-        span {
-          font-size: 13px;
-          line-height: 19px;
-        }
-      }
-
-      .InchapLogo {
-        margin-top: 20px;
-        img {
-          height: auto;
-          width: 100%;
-        }
-      }
-    }
-
-    .Bottom {
-      margin-top: 55px;
-      max-width: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-
-      .Left {
-        margin-bottom: 35px;
-        margin-left: -20px;
-
-        .About {
-          font-size: 11px;
-          line-height: 15px;
-        }
-      }
-
-      .Right {
-        max-width: 100%;
-
-        .DecorRow {
-          width: 35px;
-          height: 6px;
-          margin-bottom: 30px;
-        }
-
-        .TextHead {
-          font-size: 16px;
-          line-height: 24px;
-          margin-bottom: 40px;
-        }
-
-        .TextBody {
-          font-size: 11px;
-          line-height: 20px;
-          margin-bottom: 20px;
-        }
-      }
-    }
+    //.Bottom {
+    //  margin-top: 55px;
+    //  max-width: 100%;
+    //  flex-direction: column;
+    //  align-items: flex-start;
+    //
+    //  .Left {
+    //    margin-bottom: 35px;
+    //    margin-left: -20px;
+    //
+    //    .About {
+    //      font-size: 11px;
+    //      line-height: 15px;
+    //    }
+    //  }
+    //
+    //  .Right {
+    //    max-width: 100%;
+    //
+    //    .DecorRow {
+    //      width: 35px;
+    //      height: 6px;
+    //      margin-bottom: 30px;
+    //    }
+    //
+    //    .TextHead {
+    //      font-size: 16px;
+    //      line-height: 24px;
+    //      margin-bottom: 40px;
+    //    }
+    //
+    //    .TextBody {
+    //      font-size: 11px;
+    //      line-height: 20px;
+    //      margin-bottom: 20px;
+    //    }
+    //  }
+    //}
   }
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Container from "@/components/ui/Container/Container"
+import Container from "@/components/global/Container/Container"
 import classes from "./FixedHeader.module.scss"
 import Select from "@/components/ui/Select/Select"
 import Link from "next/link"

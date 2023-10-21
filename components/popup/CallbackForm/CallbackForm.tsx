@@ -12,19 +12,12 @@ const CallbackForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
-        email: "",
-        isChecked: true
+        email: ""
     })
 
     const onChange = (nameField: string, valueField: string) => {
         setFormData({ ...formData, [nameField]: valueField })
         setFormErrors({ ...formErrors, [nameField]: false })
-    }
-
-    const onCheck = (e: boolean) => {
-        setFormData((prev) => {
-            return { ...prev, isChecked: e }
-        })
     }
 
     const onSubmit = async () => {

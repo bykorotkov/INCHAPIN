@@ -1,4 +1,4 @@
-@import "../../../../css/common.scss";
+@import "../../../../../css/common";
 
 .VideoBlock {
   display: flex;
@@ -25,7 +25,7 @@
     height: 186px;
     width: 186px;
     position: relative;
-    background: url("../../../../images/MainPage/videoImage.png") no-repeat center / cover;
+    background: url("../../../../../images/MainPage/videoImage.png") no-repeat center / cover;
     border-radius: 50%;
     padding: 38px;
     cursor: pointer;
@@ -59,7 +59,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url("../../../icons/videoIcon.svg") no-repeat center / cover;
+        background: url("../../../../../images/icons/videoIcon.svg") no-repeat center / cover;
         width: 48px;
         height: 22px;
       }

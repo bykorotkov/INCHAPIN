@@ -1,25 +1,13 @@
-@import "../../../../css/common";
-@import '../../../../css/mixins.scss';
+@import "../../../css/common";
+@import '../../../css/mixins';
 
 .Header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  position: fixed;
-  top: -100px;
-  max-width: 100%;
-  width: 100%;
-  z-index: 20;
-  background-color: #fff;
-  transition: all .25s ease;
   padding: 0 40px;
-  left: 0;
-
-
-  &.show {
-    top: 0;
-  }
+  position: relative;
 
   .Left {
     display: flex;
@@ -79,8 +67,10 @@
         }
       }
     }
+  }
 
-
+  .TabletPhone {
+    display: none;
   }
 
   .Logo {
@@ -147,6 +137,7 @@
       font-weight: 600;
     }
 
+
     .Link:first-of-type {
       font-size: 14px;
       line-height: 14px;
@@ -162,10 +153,6 @@
     }
   }
 
-  .TabletPhone {
-    display: none;
-  }
-
   .TabletSelect {
     display: none;
   }
@@ -176,52 +163,47 @@
 }
 
 @media only screen and (min-width: $desktopWide) {
-  .Header {
-    //max-width: 1920px;
-    max-width: 100%;
-    height: 131px;
-    top: -131px;
-    left: 0;
-    padding: 0 80px;
+    .Header {
+      height: 131px;
+      padding: 0 80px;
 
-    .Logo {
-      width: 187px;
-      height: 30px;
-      margin-right: 90px;
-    }
+      .Logo {
+        width: 187px;
+        height: 30px;
+        margin-right: 90px;
+      }
 
-    .Left {
-      .BurgerContainer {
-        .Burger {
-          font-size: 15px;
-          line-height: 15px;
-          padding-left: 12px;
+      .Left {
+        .BurgerContainer {
+          .Burger {
+            font-size: 15px;
+            line-height: 15px;
+            padding-left: 12px;
+          }
+
+          .BurgerItems {
+            width: 38px;
+            height: 17px;
+          }
         }
+      }
 
-        .BurgerItems {
-          width: 38px;
+      .Right {
+        .Link:first-of-type {
+          font-size: 17px;
+          line-height: 17px;
+          width: 128px;
           height: 17px;
         }
+
+        .Link:last-of-type {
+          font-size: 15px;
+          line-height: 15px;
+          width: 155px;
+          height: 15px;
+        }
       }
     }
-
-    .Right {
-      .Link:first-of-type {
-        font-size: 17px;
-        line-height: 17px;
-        width: 128px;
-        height: 17px;
-      }
-
-      .Link:last-of-type {
-        font-size: 15px;
-        line-height: 15px;
-        width: 155px;
-        height: 15px;
-      }
-    }
-  }
-
 }
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
@@ -261,57 +243,55 @@
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
-    .Header {
-      height: 123px;
-      top: -123px;
-      padding: 0 40px;
+  .Header {
+    height: 123px;
+    padding: 0 40px;
 
-      .DesktopSelect {
-        display: none;
-      }
+    .DesktopSelect {
+      display: none;
+    }
 
-      .TabletPhone {
+    .TabletPhone {
+      display: flex;
+      border-radius: 100px;
+      border: 1px solid #D7D7D7;
+      padding: 15px;
+      cursor: pointer;
+
+      a {
         display: flex;
-        border-radius: 100px;
-        border: 1px solid #D7D7D7;
-        padding: 15px;
-        cursor: pointer;
-
-        a {
-          display: flex;
-        }
-
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: auto;
-        }
       }
 
-      .Right {
-        display: none;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
       }
+    }
 
-      .TabletSelect {
-        display: block;
-      }
+    .Right {
+      display: none;
+    }
 
-      .Left {
-        .BurgerContainer {
-          .Burger {
-            font-size: 12px;
-            line-height: 12px;
-            padding-left: 8px;
-          }
+    .TabletSelect {
+      display: block;
+    }
+
+    .Left {
+      .BurgerContainer {
+        .Burger {
+          font-size: 12px;
+          line-height: 12px;
+          padding-left: 8px;
         }
       }
     }
+  }
 }
 
 @media only screen and (max-width: $mobile) {
   .Header {
     height: 81px;
-    top: -81px;
     padding: 0 20px;
 
     .Logo {

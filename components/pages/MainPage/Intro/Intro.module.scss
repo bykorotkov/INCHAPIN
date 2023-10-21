@@ -1,0 +1,116 @@
+@import "../../../../css/common.scss";
+
+.Intro {
+  .Top {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .LeftText {
+      span {
+        color: #2F80ED;
+        font-size: 26px;
+        line-height: 36px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+
+    .InchapLogo {
+      img {
+        width: auto;
+        height: 114px;
+      }
+
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: $desktopWide) {
+  .Intro {
+    .Top {
+      margin-top: 50px;
+
+      .LeftText {
+        span {
+          font-size: 31px;
+          line-height: 43px;
+        }
+      }
+
+      .InchapLogo {
+        img {
+          height: 137px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+  .Intro {
+    .Top {
+      margin-top: 30px;
+
+      .LeftText {
+        span {
+          font-size: 19px;
+          line-height: 26px;
+        }
+      }
+
+      .InchapLogo {
+        img {
+          height: 88px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+  .Intro {
+    .Top {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .InchapLogo {
+        margin-top: 43px;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .Intro {
+    .Top {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .LeftText {
+        span {
+          font-size: 13px;
+          line-height: 19px;
+        }
+      }
+
+      .InchapLogo {
+        margin-top: 20px;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
