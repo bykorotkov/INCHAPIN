@@ -14,18 +14,6 @@ type LayoutType = {
     children: React.ReactNode
 }
 const Layout = ({ children }: LayoutType) => {
-    // Подгрузка страницы сверху при обновлении
-    useEffect(() => {
-        const handleUnload = () => {
-            window.scrollTo(0, 0)
-        }
-
-        window.addEventListener("beforeunload", handleUnload)
-
-        return () => {
-            window.removeEventListener("beforeunload", handleUnload)
-        }
-    }, [])
     const dispatch = useAppDispatch()
     const containerRef = useRef<HTMLDivElement>(null)
     const { name } = useAppSelector((state) => state.modalReducer)
