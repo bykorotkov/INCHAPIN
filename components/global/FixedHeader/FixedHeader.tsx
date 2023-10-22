@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Container from "@/components/global/Container/Container"
 import classes from "./FixedHeader.module.scss"
 import Select from "@/components/ui/Select/Select"
@@ -15,11 +15,16 @@ const FixedHeader = () => {
     const { scroll } = useAppSelector((state) => state.scrollReducer)
     const dispatch = useAppDispatch()
 
+    const prevScrollRef = useRef(0)
     useEffect(() => {
         const handleScroll = () => {
-            setShowFixedHeader(scroll > 100) // показывать фиксированный хедер, если страница прокручена более чем на 100 пикселей
+            const currentScroll = scroll
+            setShowFixedHeader(currentScroll < prevScrollRef.current && currentScroll > 150)
+            prevScrollRef.current = currentScroll
         }
         handleScroll()
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
     }, [scroll])
 
     return (
