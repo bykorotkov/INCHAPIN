@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import classes from "./Video.module.scss"
 import { useAppDispatch } from "@/hooks/redux"
 import { openModal } from "@/store/reducers/modalSlice"
+import useWindowSize from "@/hooks/useWindowSize"
 
 const Video = () => {
     const dispatch = useAppDispatch()
+    const [isOpen, setIsOpen] = useState()
+    const { width } = useWindowSize()
 
     return (
         <div className={classes.VideoBlock}>
@@ -18,6 +21,17 @@ const Video = () => {
             >
                 <div className={classes.Effect}></div>
             </button>
+            {isOpen && (
+                <video
+                    controls
+                    id={"mobileVideo"}
+                >
+                    <source
+                        src="/video.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            )}
         </div>
     )
 }

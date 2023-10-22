@@ -20,6 +20,7 @@ const VideoForm = () => {
     }
 
     const handleFullscreenChange = () => {
+        if (width < 768) return
         const videoElement = document.getElementById("VideoContainer") as HTMLVideoElement
         const video = document.getElementById("Video-player") as HTMLVideoElement
         if (videoElement && document.fullscreenElement === videoElement) {
