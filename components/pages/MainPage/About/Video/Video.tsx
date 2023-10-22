@@ -17,9 +17,10 @@ const Video = () => {
         setIsOpen(false)
     }
     const handleVideoLoadedMetadata = () => {
-        const videoElement = document.getElementById("VideoContainer")
+        const videoElement = document.getElementById("VideoContainer") as any
         if (videoElement) {
             videoElement.requestFullscreen()
+            videoElement.webkitEnterFullscreen()
             videoElement.addEventListener("fullscreenchange", handleFullscreenChange)
         }
     }
