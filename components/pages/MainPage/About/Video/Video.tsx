@@ -28,8 +28,6 @@ const Video = () => {
     const handleFullscreenChange = () => {
         const videoElement = document.getElementById("mobileVideo") as HTMLVideoElement
         if (videoElement && document.fullscreenElement === videoElement) {
-            videoElement.play()
-            videoElement.volume = 0.1
         } else {
             closeVideo()
         }
@@ -53,6 +51,7 @@ const Video = () => {
                     id={"mobileVideo"}
                     className={classes.mobileVideo}
                     onLoadedMetadata={handleVideoLoadedMetadata}
+                    autoPlay
                 >
                     <source
                         src="/video.mp4"
