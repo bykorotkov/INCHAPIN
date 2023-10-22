@@ -17,7 +17,7 @@ const Video = () => {
         setIsOpen(false)
     }
     const handleVideoLoadedMetadata = () => {
-        const videoElement = document.getElementById("VideoContainer") as any
+        const videoElement = document.getElementById("mobileVideo") as any
         if (videoElement) {
             videoElement.requestFullscreen()
             videoElement.webkitEnterFullscreen()
@@ -26,7 +26,7 @@ const Video = () => {
     }
 
     const handleFullscreenChange = () => {
-        const videoElement = document.getElementById("VideoContainer") as HTMLVideoElement
+        const videoElement = document.getElementById("mobileVideo") as HTMLVideoElement
         if (videoElement && document.fullscreenElement !== videoElement) {
             closeVideo()
         }
@@ -45,19 +45,17 @@ const Video = () => {
                 <div className={classes.Effect}></div>
             </button>
             {isOpen && (
-                <div id="VideoContainer">
-                    <video
-                        controls
-                        id={"mobileVideo"}
-                        className={classes.mobileVideo}
-                        onLoadedMetadata={handleVideoLoadedMetadata}
-                    >
-                        <source
-                            src="/video.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                </div>
+                <video
+                    controls
+                    id={"mobileVideo"}
+                    className={classes.mobileVideo}
+                    onLoadedMetadata={handleVideoLoadedMetadata}
+                >
+                    <source
+                        src="/video.mp4"
+                        type="video/mp4"
+                    />
+                </video>
             )}
         </div>
     )
