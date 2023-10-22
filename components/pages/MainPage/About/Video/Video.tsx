@@ -27,7 +27,10 @@ const Video = () => {
 
     const handleFullscreenChange = () => {
         const videoElement = document.getElementById("mobileVideo") as HTMLVideoElement
-        if (videoElement && document.fullscreenElement !== videoElement) {
+        if (videoElement && document.fullscreenElement === videoElement) {
+            videoElement.play()
+            videoElement.volume = 0.1
+        } else {
             closeVideo()
         }
     }
