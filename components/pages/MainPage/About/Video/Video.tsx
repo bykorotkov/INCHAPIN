@@ -30,21 +30,21 @@ const Video = () => {
     const closeVideo = () => {
         setIsOpen(false)
     }
-    const handleVideoLoadedMetadata = () => {
+
+    useEffect(() => {
         const videoElement = document.getElementById("mobileVideo") as any
-        if (videoElement) {
-            videoElement.requestFullscreen()
-            videoElement.webkitEnterFullscreen()
-            videoElement.addEventListener("fullscreenchange", handleFullscreenChange)
-        }
-    }
+        videoElement.addEventListener("webkitendfullscreen", handleFullscreenChange)
+        videoElement.addEventListener("fullscreenchange", handleFullscreenChange)
+    }, [])
 
     const handleFullscreenChange = () => {
         const videoElement = document.getElementById("mobileVideo") as HTMLVideoElement
         if (videoElement && document.fullscreenElement === videoElement) {
+            videoElement.requestFullscreen()
             videoElement.play()
             videoElement.volume = 0.1
         } else {
+            console.log("closing")
             closeVideo()
         }
     }
@@ -65,7 +65,6 @@ const Video = () => {
                 controls
                 id={"mobileVideo"}
                 className={classes.mobileVideo}
-                onLoadedMetadata={handleVideoLoadedMetadata}
                 onChange={openVideo}
                 ref={videoRef}
             >

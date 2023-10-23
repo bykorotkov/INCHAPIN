@@ -76,6 +76,9 @@
     height: 100%;
     width: 100%;
     display: none;
+    position: fixed;
+    left: -9999px;
+    top: -9999px;
   }
 }
 
