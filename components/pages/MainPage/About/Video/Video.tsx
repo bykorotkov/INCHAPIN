@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import classes from "./Video.module.scss"
 import { useAppDispatch } from "@/hooks/redux"
 import { openModal } from "@/store/reducers/modalSlice"
@@ -6,7 +6,7 @@ import useWindowSize from "@/hooks/useWindowSize"
 
 const Video = () => {
     const dispatch = useAppDispatch()
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const { width } = useWindowSize()
 
     const openVideo = () => {
@@ -28,6 +28,8 @@ const Video = () => {
     const handleFullscreenChange = () => {
         const videoElement = document.getElementById("mobileVideo") as HTMLVideoElement
         if (videoElement && document.fullscreenElement === videoElement) {
+            videoElement.play()
+            videoElement.volume = 0.1
         } else {
             closeVideo()
         }
@@ -51,7 +53,6 @@ const Video = () => {
                     id={"mobileVideo"}
                     className={classes.mobileVideo}
                     onLoadedMetadata={handleVideoLoadedMetadata}
-                    autoPlay
                 >
                     <source
                         src="/video.mp4"
