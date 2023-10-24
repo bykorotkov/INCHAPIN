@@ -16,14 +16,21 @@ const Video = () => {
 
         const videoElement = document.getElementById("mobileVideo") as any
         if (videoElement) {
+            videoElement.currentTime = 0
             videoElement.style.display = "block"
+        }
+
+        if (navigator.userAgent.match(/Android/i)) {
+            console.log("android")
+            if (videoElement) {
+                videoElement.requestFullscreen().then(() => videoElement.play())
+            }
         }
     }
 
     useEffect(() => {
         if (isOpen && videoRef.current) {
             videoRef.current.play()
-            videoRef.current.volume = 0.1
         }
     }, [isOpen])
 
@@ -38,14 +45,16 @@ const Video = () => {
     }, [])
 
     const handleFullscreenChange = () => {
-        const videoElement = document.getElementById("mobileVideo") as HTMLVideoElement
+        const videoElement = document.getElementById("mobileVideo") as any
         if (videoElement && document.fullscreenElement === videoElement) {
-            videoElement.requestFullscreen()
+            videoElement.currentTime = 0
             videoElement.play()
             videoElement.volume = 0.1
+            console.log("entering")
         } else {
-            console.log("closing")
             closeVideo()
+            videoElement.currentTime = 0
+            videoElement.pause()
         }
     }
 
@@ -56,7 +65,7 @@ const Video = () => {
                 <span>1:25 минут</span>
             </div>
             <button
-                onClick={width > 768 ? () => dispatch(openModal("VideoForm")) : openVideo}
+                onClick={width >= 768 ? () => dispatch(openModal("VideoForm")) : openVideo}
                 className={classes.Video}
             >
                 <div className={classes.Effect}></div>
