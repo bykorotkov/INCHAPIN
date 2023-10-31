@@ -28,7 +28,10 @@ const ParallaxItem = () => {
     }, [scroll])
 
     return (
-        <div className={classes.BannerBottom}>
+        <div
+            className={classes.BannerBottom}
+            style={{ transform: `translate(0%, calc(0% + ${translateY}px))` }}
+        >
             <Fancybox
                 options={{
                     Carousel: {
