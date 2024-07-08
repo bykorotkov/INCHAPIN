@@ -22,7 +22,6 @@ const colorStyles = {
 }
 
 const Select = () => {
-    console.log("select renders")
     const [selectedOption, setSelectedOption] = useState(null)
 
     function handleChange(selected: any) {

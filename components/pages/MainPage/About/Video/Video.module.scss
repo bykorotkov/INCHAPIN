@@ -189,11 +189,14 @@
     .Text {
       span{
         font-size: 13px;
+        color: var(--tg-theme-text-color);
         line-height: 21px;
+        opacity: 0.7;
       }
 
       p{
         font-size: 10px;
+        color: var(--tg-theme-text-color);
         line-height: 16px;
       }
     }

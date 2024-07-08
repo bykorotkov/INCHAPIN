@@ -79,6 +79,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ru">
+            <head>
+                <script
+                    async
+                    src="https://telegram.org/js/telegram-web-app.js"
+                ></script>
+            </head>
+
             <body>{children}</body>
         </html>
     )

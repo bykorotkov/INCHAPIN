@@ -2,12 +2,13 @@
 
 .Main {
   padding-bottom: 40px;
+
 }
 
 @media only screen and (min-width: $desktopWide) {
   .Main {
     padding-bottom: 80px;
-
+    padding-bottom: 800px;
   }
 }
 
