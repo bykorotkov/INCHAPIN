@@ -2,7 +2,9 @@ import React, { useEffect } from "react"
 import classes from "./About.module.scss"
 import ParallaxItem from "@/components/pages/MainPage/About/ParallaxItem/ParallaxItem"
 import Video from "@/components/pages/MainPage/About/Video/Video"
-const tg = window.Telegram.WebApp
+if (window.Telegram) {
+    const tg = window.Telegram.WebApp
+}
 
 const About = () => {
     return (
