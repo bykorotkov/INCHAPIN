@@ -63,6 +63,7 @@
 
 @media only screen and (max-width: $mobile) {
   .Wrapper {
+    background: var(--tg-theme-bg-color);
     .Close {
       right: 20px;
       top: 20px;
