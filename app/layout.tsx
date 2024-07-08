@@ -81,8 +81,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="ru">
             <head>
                 <script
-                    async
                     src="https://telegram.org/js/telegram-web-app.js"
+                    async
                 ></script>
             </head>
 
