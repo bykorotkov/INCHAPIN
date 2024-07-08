@@ -313,6 +313,7 @@
     height: 81px;
     top: -81px;
     padding: 0 20px;
+    background-color: var(--tg-theme-bg-color);
 
     .Logo {
       width: 130px;
@@ -351,6 +352,12 @@
         object-fit: cover;
         width: 100%;
         height: auto;
+      }
+
+      svg {
+        path {
+          fill: var(--tg-theme-text-color);
+        }
       }
     }
   }
