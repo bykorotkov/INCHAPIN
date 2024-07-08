@@ -108,6 +108,12 @@
           height: auto;
           width: 100%;
         }
+
+        svg {
+          path {
+            fill: var(--tg-theme-text-color) !important
+          }
+        }
       }
     }
   }

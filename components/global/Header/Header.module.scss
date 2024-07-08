@@ -332,6 +332,12 @@
         width: 100%;
         height: auto;
       }
+
+      svg {
+        path {
+          fill: var(--tg-theme-text-color);
+        }
+      }
     }
   }
 }
