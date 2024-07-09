@@ -7,11 +7,12 @@ import Input from "@/components/ui/Input/Input"
 import { useTelegram } from "@/hooks/useTelegram"
 
 const CallbackForm = () => {
-    const [success, setSuccess] = useState(false)
-    const [formErrors, setFormErrors] = useState({ name: false, phone: false, email: false })
+    const [success, setSuccess] = useState<boolean>(false)
+    const [formErrors, setFormErrors] = useState<{ name: boolean; phone: boolean; email: boolean }>({ name: false, phone: false, email: false })
     const { webApp } = useTelegram()
 
     useEffect(() => {
+        // @ts-ignore
         webApp?.MainButton.setParams({
             text: "Отправить данные"
         })
@@ -37,12 +38,15 @@ const CallbackForm = () => {
         const data = {
             formData
         }
+        // @ts-ignore
         webApp?.sendData(JSON.stringify(data))
     }, [formData.name, formData.email, formData.phone])
 
     useEffect(() => {
+        // @ts-ignore
         webApp?.onEvent("mainButtonClicked", onSendData)
         return () => {
+            // @ts-ignore
             webApp?.offEvent("mainButtonClicked", onSendData)
         }
     }, [onSendData])
