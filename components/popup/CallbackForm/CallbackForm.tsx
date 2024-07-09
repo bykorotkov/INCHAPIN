@@ -1,19 +1,51 @@
-import React, { useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import Modal from "@/components/global/Modal/Modal"
 import { CSSTransition } from "react-transition-group"
 import classes from "./CallbackForm.module.scss"
 import Button from "@/components/ui/Button/Button"
 import Input from "@/components/ui/Input/Input"
+import { useTelegram } from "@/hooks/useTelegram"
 
 const CallbackForm = () => {
     const [success, setSuccess] = useState(false)
     const [formErrors, setFormErrors] = useState({ name: false, phone: false, email: false })
+    const { webApp } = useTelegram()
+
+    useEffect(() => {
+        webApp?.MainButton.setParams({
+            text: "Отправить данные"
+        })
+    }, [])
 
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         email: ""
     })
+
+    useEffect(() => {
+        if (webApp) {
+            if (!formData.name || !formData.email || !formData.phone) {
+                webApp.MainButton.hide()
+            } else {
+                webApp.MainButton.show()
+            }
+        }
+    }, [formData.name, formData.email, formData.phone])
+
+    const onSendData = useCallback(() => {
+        const data = {
+            formData
+        }
+        webApp?.sendData(JSON.stringify(data))
+    }, [formData.name, formData.email, formData.phone])
+
+    useEffect(() => {
+        webApp?.onEvent("mainButtonClicked", onSendData)
+        return () => {
+            webApp?.offEvent("mainButtonClicked", onSendData)
+        }
+    }, [onSendData])
 
     const onChange = (nameField: string, valueField: string) => {
         setFormData({ ...formData, [nameField]: valueField })

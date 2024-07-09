@@ -1,22 +1,10 @@
 "use client"
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import classes from "./About.module.scss"
 import ParallaxItem from "@/components/pages/MainPage/About/ParallaxItem/ParallaxItem"
 import Video from "@/components/pages/MainPage/About/Video/Video"
 
 const About = () => {
-    useEffect(() => {
-        const fetch = async () => {
-            // @ts-ignore
-            if (window?.Telegram) {
-                // @ts-ignore
-                const tg = window.Telegram.WebApp
-                console.log("tg", tg)
-            }
-        }
-
-        fetch()
-    }, [])
     return (
         <section className={classes.About}>
             <div className={classes.Left}>

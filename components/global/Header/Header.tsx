@@ -11,6 +11,15 @@ import PhoneIcon from "@/images/header/phoneIcon.svg"
 
 const Header = () => {
     const dispatch = useAppDispatch()
+    const [webApp, setWebApp] = useState(null)
+
+    useEffect(() => {
+        const app = (window as any).Telegram?.WebApp
+        if (app) {
+            app.ready()
+            setWebApp(app)
+        }
+    }, [])
 
     return (
         <header

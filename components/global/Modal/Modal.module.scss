@@ -67,6 +67,12 @@
     .Close {
       right: 20px;
       top: 20px;
+
+      svg {
+        path {
+          fill: var(--tg-theme-text-color);
+        }
+      }
     }
   }
 }
