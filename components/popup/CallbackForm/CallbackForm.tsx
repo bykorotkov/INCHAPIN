@@ -36,8 +36,8 @@ const CallbackForm = () => {
 
     const onSendData = useCallback(() => {
         // @ts-ignore
-        webApp?.sendData(JSON.stringify(formData))
-    }, [formData.name, formData.email, formData.phone])
+        webApp?.sendData(JSON.stringify({ formData: formData }))
+    }, [formData])
 
     useEffect(() => {
         // @ts-ignore
