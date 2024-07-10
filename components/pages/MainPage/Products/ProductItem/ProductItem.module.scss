@@ -25,6 +25,12 @@
   color: var(--tg-theme-subtitle-text-color);
 }
 
+.price {
+  span {
+    font-size: 0.9em;
+  }
+}
+
 .addBtn {
   width: 100%;
   color: var(--tg-theme-button-text-color);
