@@ -12,11 +12,13 @@ const CallbackForm = () => {
     const { webApp } = useTelegram()
 
     useEffect(() => {
-        // @ts-ignore
-        webApp?.MainButton.setParams({
-            text: "Отправить данные"
-        })
-    }, [])
+        if (webApp && webApp.MainButton.isVisible) {
+            // @ts-ignore
+            webApp.MainButton.setParams({
+                text: "Отправить данные"
+            })
+        }
+    }, [webApp?.MainButton.isVisible])
 
     const [formData, setFormData] = useState({
         name: "",

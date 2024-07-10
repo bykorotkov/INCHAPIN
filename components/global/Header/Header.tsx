@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import classes from "./Header.module.scss"
 import Image from "next/image"
 import headerLogo from "@/images/header/headerLogo.svg"
@@ -11,15 +11,6 @@ import PhoneIcon from "@/images/header/phoneIcon.svg"
 
 const Header = () => {
     const dispatch = useAppDispatch()
-    const [webApp, setWebApp] = useState(null)
-
-    useEffect(() => {
-        const app = (window as any).Telegram?.WebApp
-        if (app) {
-            app.ready()
-            setWebApp(app)
-        }
-    }, [])
 
     return (
         <header
