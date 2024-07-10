@@ -44,9 +44,7 @@ export function useTelegram() {
         onClose,
         onToggleButton,
         webApp,
-        // @ts-ignore
-        user: webApp.initDataUnsafe?.user,
-        // @ts-ignore
-        queryId: webApp.initDataUnsafe?.query_id
+        user: webApp?.initDataUnsafe?.user,
+        queryId: webApp?.initDataUnsafe?.query_id
     }
 }
