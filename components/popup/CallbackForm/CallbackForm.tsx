@@ -37,26 +37,22 @@ const CallbackForm = () => {
     }, [formData.name, formData.email, formData.phone])
 
     const onSendData = useCallback(() => {
-        if (webApp && webApp.MainButton.isVisible) {
-            const data = {
-                name: formData.name,
-                phone: formData.phone,
-                email: formData.email
-            }
-
-            // @ts-ignore
-            webApp?.sendData(JSON.stringify(data))
+        const data = {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email
         }
+
+        // @ts-ignore
+        webApp?.sendData(JSON.stringify(data))
     }, [formData.name, formData.email, formData.phone])
 
     useEffect(() => {
-        if (webApp && webApp.MainButton.isVisible) {
+        // @ts-ignore
+        webApp?.onEvent("mainButtonClicked", onSendData)
+        return () => {
             // @ts-ignore
-            webApp?.onEvent("mainButtonClicked", onSendData)
-            return () => {
-                // @ts-ignore
-                webApp?.offEvent("mainButtonClicked", onSendData)
-            }
+            webApp?.offEvent("mainButtonClicked", onSendData)
         }
     }, [onSendData])
 
