@@ -32,19 +32,21 @@ const Products = () => {
     const [addedItems, setAddedItems] = useState<Product[]>([])
 
     const onSendData = useCallback(() => {
-        const data = {
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
-            queryId
+        if (queryId) {
+            const data = {
+                products: addedItems,
+                totalPrice: getTotalPrice(addedItems),
+                queryId
+            }
+            fetch("http://localhost:8000/web-data", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
         }
-        fetch("http://localhost:8000/web-data", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-    }, [addedItems])
+    }, [addedItems, queryId])
 
     useEffect(() => {
         // @ts-ignore
