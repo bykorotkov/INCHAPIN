@@ -38,7 +38,7 @@ const Layout = ({ children }: LayoutType) => {
 
     return (
         <>
-            <FixedHeader />
+            {/*<FixedHeader />*/}
             <div
                 className={classes.Layout}
                 ref={containerRef}
